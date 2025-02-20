@@ -5,9 +5,27 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/FishGameStart.unity
+    guid: f0dcf67b0284fd94a828881e114fdedf
+  - enabled: 1
+    path: Assets/Scenes/FishGameContinue.unity
+    guid: 2a847aaf304e9e249b0b246fdfc7bc1b
+  - enabled: 1
+    path: Assets/Scenes/FishingAreaSelect.unity
+    guid: 2466ecdad8333e14c92437b59c903ab1
+  - enabled: 1
+    path: Assets/Scenes/FishingFrame.unity
+    guid: 28fca34fe7d74694894d8b6b8ac514e3
+  - enabled: 1
+    path: Assets/Scenes/FishingEquipmentStore.unity
+    guid: 3c9df420715b79345a76c90aedfbe03a
+  - enabled: 1
+    path: Assets/Scenes/FishIllustratebook.unity
+    guid: 2f5e6516e9b416949933fa2af6d31e6c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
