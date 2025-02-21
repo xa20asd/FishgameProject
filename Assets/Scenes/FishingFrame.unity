@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &106988579
 RectTransform:
   m_ObjectHideFlags: 0
@@ -155,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 736, y: -117}
+  m_AnchoredPosition: {x: 736, y: -69}
   m_SizeDelta: {x: 200, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &106988580
@@ -387,8 +387,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isButtonPressed: 0
-  throwTime: 0
   throwDistance: {fileID: 1479680063}
+  theFishStatus: {fileID: 653701414}
+  theFish: {fileID: 1905892187}
 --- !u!1 &134550006
 GameObject:
   m_ObjectHideFlags: 0
@@ -1344,7 +1345,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &432028186
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1543,7 +1544,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &553177385
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1695,13 +1696,14 @@ GameObject:
   - component: {fileID: 653701415}
   - component: {fileID: 653701417}
   - component: {fileID: 653701416}
+  - component: {fileID: 653701418}
   m_Layer: 5
   m_Name: FishStatus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &653701415
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1754,7 +1756,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1.5
-  m_Text: "\u9B5A\u4E0A\u9264"
+  m_Text: "\u7B49\u5F85\u4E2D..."
 --- !u!222 &653701417
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1763,6 +1765,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 653701414}
   m_CullTransparentMesh: 1
+--- !u!114 &653701418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653701414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bf5871758dc7aa47b9c6cecf864f7d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  earlyShow: 5
+  laterShow: 15
+  theShowTime: 0
+  tensionButton: {fileID: 832326538}
 --- !u!1 &787515149
 GameObject:
   m_ObjectHideFlags: 0
@@ -1854,13 +1872,14 @@ GameObject:
   - component: {fileID: 832326542}
   - component: {fileID: 832326541}
   - component: {fileID: 832326540}
+  - component: {fileID: 832326543}
   m_Layer: 5
   m_Name: Tension
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &832326539
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1878,7 +1897,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 438, y: -117}
+  m_AnchoredPosition: {x: 438, y: -69}
   m_SizeDelta: {x: 200, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &832326540
@@ -1924,7 +1943,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 832326541}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 832326543}
+        m_TargetAssemblyTypeName: TensionTheString, Assembly-CSharp
+        m_MethodName: TensionButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &832326541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1963,6 +1994,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832326538}
   m_CullTransparentMesh: 1
+--- !u!114 &832326543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832326538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0085ccf66741bb409d2d17e7db115e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  continueTime: 0
+  showLooseTime: 0
+  showTensionTime: 0
+  setFishEscapeTime: 0
+  fishReadyEscapeTime: 0
+  theFishStatus: {fileID: 653701416}
+  theFish: {fileID: 1905892187}
+  earlyTime: 3
+  laterTime: 10
+  throwString: {fileID: 119278119}
+  withdrawButton: {fileID: 106988578}
 --- !u!1 &837149721
 GameObject:
   m_ObjectHideFlags: 0
@@ -3801,7 +3855,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -50.300003}
+  m_AnchoredPosition: {x: 0, y: -64.1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1377976177
@@ -5216,7 +5270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1905892188
 RectTransform:
   m_ObjectHideFlags: 0
