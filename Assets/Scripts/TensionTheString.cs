@@ -5,11 +5,10 @@ using UnityEngine.UI;
 
 public class TensionTheString : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    public float continueTime, showLooseTime, showTensionTime, setFishEscapeTime, fishReadyEscapeTime;
+    public float continueTime, showLooseTime, showTensionTime, showFishEscapeTime, fishReadyEscapeTime;
     bool isTension, isturnbackTension, isFishReadyEscape;
     public Text theFishStatus;
     public GameObject theFish;
-    //public Text theDistance;
     
     [SerializeField, Header("設定鬆緊隨機時間")]
     public float earlyTime;
@@ -18,12 +17,13 @@ public class TensionTheString : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     [SerializeField, Header("釣竿動作")]
     public GameObject throwString;
     public GameObject withdrawButton;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         showLooseTime = Random.Range(earlyTime, laterTime);
         showTensionTime = Random.Range(earlyTime, laterTime);
-        setFishEscapeTime = Random.Range(earlyTime, laterTime);
+        showFishEscapeTime = Random.Range(earlyTime, laterTime);
     }
 
     // Update is called once per frame
@@ -48,7 +48,7 @@ public class TensionTheString : MonoBehaviour, IPointerDownHandler, IPointerUpHa
                 theFishStatus.text = "-- 緊 --";
                 Debug.Log("-- 緊 --");
                 fishReadyEscapeTime += Time.deltaTime;
-                if (fishReadyEscapeTime >= setFishEscapeTime)
+                if (fishReadyEscapeTime >= showFishEscapeTime)
                 {
                     theFish.SetActive(false);
                     throwString.SetActive(true);
@@ -74,20 +74,12 @@ public class TensionTheString : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         isTension = true;
         isturnbackTension = false ;
         theFishStatus.text = "-- 緊 --";
+        theFish.GetComponent<Text>().text = "?";
+
     }
     public void OnPointerUp(PointerEventData EventData)
     {
         isturnbackTension = true;
         isTension = false;
-        if (continueTime <= showTensionTime)
-        {
-            theFish.SetActive(false);
-            throwString.SetActive(true);
-            this.gameObject.SetActive(false);
-            //theDistance.text = "";
-            theFishStatus.text = "逃跑了...";
-            Debug.Log("逃跑了...");
-            isturnbackTension = false;
-        }
     }
 }

@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 106988582}
   - component: {fileID: 106988581}
   - component: {fileID: 106988580}
+  - component: {fileID: 106988583}
   m_Layer: 5
   m_Name: Withdraw
   m_TagString: Untagged
@@ -240,6 +241,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 106988578}
   m_CullTransparentMesh: 1
+--- !u!114 &106988583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106988578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4fd641f0f7fcbd4396c48dd1c6e2659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwDistance: {fileID: 1479680063}
+  theFishStatus: {fileID: 653701416}
+  theFish: {fileID: 1905892189}
+  theFishPrice: {fileID: 553177384}
+  adjustWithdrawTime: 0.5
+  withdrawdistance: 0
+  isWithdrawing: 0
+  throwString: {fileID: 119278119}
+  tensionButton: {fileID: 832326538}
+  withdrawButton: {fileID: 106988578}
+  get: {fileID: 432028185}
 --- !u!1 &119278119
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,6 +414,7 @@ MonoBehaviour:
   throwDistance: {fileID: 1479680063}
   theFishStatus: {fileID: 653701414}
   theFish: {fileID: 1905892187}
+  isReStarFishComeTime: {fileID: 0}
 --- !u!1 &134550006
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,6 +1364,7 @@ GameObject:
   - component: {fileID: 432028189}
   - component: {fileID: 432028188}
   - component: {fileID: 432028187}
+  - component: {fileID: 432028190}
   m_Layer: 5
   m_Name: Get
   m_TagString: Untagged
@@ -1409,7 +1435,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 432028188}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 432028190}
+        m_TargetAssemblyTypeName: GetFish, Assembly-CSharp
+        m_MethodName: GetClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &432028188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1448,6 +1486,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 432028185}
   m_CullTransparentMesh: 1
+--- !u!114 &432028190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432028185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bed1d997a53e40a46b1dc8a6e289bbb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwString: {fileID: 119278119}
+  tensionString: {fileID: 832326538}
+  withdrawString: {fileID: 106988578}
+  theFishStatus: {fileID: 653701414}
+  theFish: {fileID: 1905892187}
+  theFishPirce: {fileID: 553177384}
+  money: {fileID: 787515151}
 --- !u!1 &513856453
 GameObject:
   m_ObjectHideFlags: 0
@@ -1699,7 +1756,7 @@ GameObject:
   - component: {fileID: 653701418}
   m_Layer: 5
   m_Name: FishStatus
-  m_TagString: Untagged
+  m_TagString: theFishinfo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1780,6 +1837,8 @@ MonoBehaviour:
   earlyShow: 5
   laterShow: 15
   theShowTime: 0
+  waitingTime: 0
+  isFishComing: 0
   tensionButton: {fileID: 832326538}
 --- !u!1 &787515149
 GameObject:
@@ -1851,7 +1910,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1.5
-  m_Text: 1000
+  m_Text: 0
 --- !u!222 &787515152
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2009,7 +2068,7 @@ MonoBehaviour:
   continueTime: 0
   showLooseTime: 0
   showTensionTime: 0
-  setFishEscapeTime: 0
+  showFishEscapeTime: 0
   fishReadyEscapeTime: 0
   theFishStatus: {fileID: 653701416}
   theFish: {fileID: 1905892187}
@@ -5288,7 +5347,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 7}
-  m_SizeDelta: {x: 480, y: 150}
+  m_SizeDelta: {x: 400, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1905892189
 MonoBehaviour:
