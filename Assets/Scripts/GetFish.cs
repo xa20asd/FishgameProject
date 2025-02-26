@@ -11,7 +11,8 @@ public class GetFish : MonoBehaviour
     [SerializeField, Header("魚類資訊")]
     public GameObject theFishStatus;
     public GameObject theFish;
-    public GameObject theFishPirce;
+    public GameObject theFishPrice;
+    public GameObject realFishPrice;
 
     [SerializeField,Header("擁有金錢")]
     public Text money;
@@ -39,11 +40,13 @@ public class GetFish : MonoBehaviour
         withdrawString.SetActive(false);
         theFishStatus.SetActive(false);
         theFish.SetActive(false);
-        theFishPirce.SetActive(false);
+        PlayerPrefs.SetString(theFish.GetComponent<Text>().text, theFish.GetComponent<Text>().text);
+        theFishPrice.SetActive(false);
+        realFishPrice.SetActive(false);
+        //PlayerPrefs.SetInt(theFish.GetComponent<Text>().text, int.Parse(realFishPrice.GetComponent<Text>().text));
         this.gameObject.SetActive(false);
-        moneyCalculate += 8;
-        string newMoney = moneyCalculate.ToString();
-        money.text = newMoney;
+        moneyCalculate += int.Parse(realFishPrice.GetComponent<Text>().text);
+        money.text = moneyCalculate.ToString();
         foreach (Button button in notFishCmdButton)
         {
             button.interactable = true;

@@ -336,6 +336,7 @@ MonoBehaviour:
   theFishStatus: {fileID: 653701416}
   theFish: {fileID: 1905892189}
   theFishPrice: {fileID: 553177384}
+  realFishPrice: {fileID: 922039921}
   adjustWithdrawTime: 0.5
   withdrawdistance: 0
   isWithdrawing: 0
@@ -343,6 +344,12 @@ MonoBehaviour:
   tensionButton: {fileID: 832326538}
   withdrawButton: {fileID: 106988578}
   get: {fileID: 432028185}
+  rangeMax: 75
+  rangeMin: 0
+  fishingP1: 70
+  fishingP2: 60
+  fishingP3: 45
+  fishingP4: 25
 --- !u!1 &119278119
 GameObject:
   m_ObjectHideFlags: 0
@@ -1929,7 +1936,8 @@ MonoBehaviour:
   withdrawString: {fileID: 106988578}
   theFishStatus: {fileID: 653701414}
   theFish: {fileID: 1905892187}
-  theFishPirce: {fileID: 553177384}
+  theFishPrice: {fileID: 553177384}
+  realFishPrice: {fileID: 922039921}
   money: {fileID: 787515151}
   notFishCmdButton:
   - {fileID: 1255697326}
@@ -2268,7 +2276,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &553177385
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3971,7 +3979,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &922039922
 RectTransform:
   m_ObjectHideFlags: 0
