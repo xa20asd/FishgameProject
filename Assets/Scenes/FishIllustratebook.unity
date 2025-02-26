@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 7000679}
   - component: {fileID: 7000678}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u5433\u90ED\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -233,7 +233,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7000678
 MonoBehaviour:
@@ -268,7 +268,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u5433\u90ED\u9B5A"
 --- !u!222 &7000679
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -368,7 +368,7 @@ GameObject:
   - component: {fileID: 9349981}
   - component: {fileID: 9349980}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u9C78\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -391,7 +391,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9349980
 MonoBehaviour:
@@ -426,7 +426,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u9C78\u9B5A"
 --- !u!222 &9349981
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -523,7 +523,7 @@ GameObject:
   - component: {fileID: 19724548}
   - component: {fileID: 19724547}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u6A59\u5E36\u9C3B"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -546,7 +546,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &19724547
 MonoBehaviour:
@@ -581,7 +581,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u6A59\u5E36\u9C3B"
 --- !u!222 &19724548
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -754,6 +754,7 @@ GameObject:
   - component: {fileID: 42645342}
   - component: {fileID: 42645341}
   - component: {fileID: 42645340}
+  - component: {fileID: 42645343}
   m_Layer: 5
   m_Name: Seaside
   m_TagString: Untagged
@@ -824,7 +825,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 42645341}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 42645343}
+        m_TargetAssemblyTypeName: illustrateBookOpen, Assembly-CSharp
+        m_MethodName: OpenFishData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &42645341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -863,6 +876,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42645338}
   m_CullTransparentMesh: 1
+--- !u!114 &42645343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42645338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a770b19ef1a3c74d8ccbba7d11704e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theButtonText: {fileID: 1077769854}
+  elseButtonText:
+  - {fileID: 511290408}
+  - {fileID: 1343287227}
+  theFishData: {fileID: 1951522111}
+  elseFishData:
+  - {fileID: 224782459}
+  - {fileID: 1959332909}
 --- !u!1 &49808209
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,12 +1060,12 @@ GameObject:
   - component: {fileID: 72079091}
   - component: {fileID: 72079090}
   m_Layer: 5
-  m_Name: fish (4)
+  m_Name: "\u6591\u99AC\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &72079089
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1255,12 +1288,12 @@ GameObject:
   - component: {fileID: 104555569}
   - component: {fileID: 104555568}
   m_Layer: 5
-  m_Name: fish (7)
+  m_Name: "\u9ED1\u9BF0"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &104555567
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1489,7 +1522,7 @@ GameObject:
   - component: {fileID: 132140997}
   - component: {fileID: 132140996}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u9C31\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1512,7 +1545,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &132140996
 MonoBehaviour:
@@ -1547,7 +1580,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u9C31\u9B5A"
 --- !u!222 &132140997
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1568,12 +1601,12 @@ GameObject:
   - component: {fileID: 134724095}
   - component: {fileID: 134724094}
   m_Layer: 5
-  m_Name: fish (14)
+  m_Name: "\u70CF\u9C31"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &134724093
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1723,12 +1756,12 @@ GameObject:
   - component: {fileID: 156733011}
   - component: {fileID: 156733010}
   m_Layer: 5
-  m_Name: fish (3)
+  m_Name: "\u9577\u543B\u9BDB"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &156733009
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1799,7 +1832,7 @@ GameObject:
   - component: {fileID: 165269411}
   - component: {fileID: 165269410}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u7AF9\u7B74\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1822,7 +1855,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &165269410
 MonoBehaviour:
@@ -1857,7 +1890,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u7AF9\u7B74\u9B5A"
 --- !u!222 &165269411
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1957,6 +1990,7 @@ GameObject:
   - component: {fileID: 175725686}
   - component: {fileID: 175725685}
   - component: {fileID: 175725684}
+  - component: {fileID: 175725687}
   m_Layer: 5
   m_Name: Stream
   m_TagString: Untagged
@@ -2027,7 +2061,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 175725685}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 175725687}
+        m_TargetAssemblyTypeName: illustrateBookOpen, Assembly-CSharp
+        m_MethodName: OpenFishData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &175725685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2066,6 +2112,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175725682}
   m_CullTransparentMesh: 1
+--- !u!114 &175725687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175725682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a770b19ef1a3c74d8ccbba7d11704e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theButtonText: {fileID: 511290408}
+  elseButtonText:
+  - {fileID: 1343287227}
+  - {fileID: 1077769854}
+  theFishData: {fileID: 224782459}
+  elseFishData:
+  - {fileID: 1959332909}
+  - {fileID: 1951522111}
 --- !u!1 &186651162
 GameObject:
   m_ObjectHideFlags: 0
@@ -2078,7 +2144,7 @@ GameObject:
   - component: {fileID: 186651165}
   - component: {fileID: 186651164}
   m_Layer: 5
-  m_Name: fish (8)
+  m_Name: "\u53F0\u7063\u9326\u9BC9"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2154,7 +2220,7 @@ GameObject:
   - component: {fileID: 202075129}
   - component: {fileID: 202075128}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u77F3\u6591\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2177,7 +2243,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &202075128
 MonoBehaviour:
@@ -2212,7 +2278,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u77F3\u6591\u9B5A"
 --- !u!222 &202075129
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2446,7 +2512,7 @@ GameObject:
   - component: {fileID: 221734305}
   - component: {fileID: 221734304}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u7F8E\u6D32\u9BF0"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2469,7 +2535,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &221734304
 MonoBehaviour:
@@ -2504,7 +2570,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u7F8E\u6D32\u9BF0"
 --- !u!222 &221734305
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2530,7 +2596,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &224782460
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2630,7 +2696,7 @@ GameObject:
   - component: {fileID: 266321923}
   - component: {fileID: 266321922}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u591A\u9C2D\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2653,7 +2719,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &266321922
 MonoBehaviour:
@@ -2688,7 +2754,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u591A\u9C2D\u9B5A"
 --- !u!222 &266321923
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2788,12 +2854,12 @@ GameObject:
   - component: {fileID: 279997239}
   - component: {fileID: 279997238}
   m_Layer: 5
-  m_Name: fish (2)
+  m_Name: "\u9BDB\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &279997237
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2948,7 +3014,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &299312155
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3410,7 +3476,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &372169016
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3481,12 +3547,12 @@ GameObject:
   - component: {fileID: 373319266}
   - component: {fileID: 373319265}
   m_Layer: 5
-  m_Name: fish (5)
+  m_Name: "\u9752\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &373319264
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3633,7 +3699,7 @@ GameObject:
   - component: {fileID: 401595760}
   - component: {fileID: 401595759}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u5927\u982D\u9C3B"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3656,7 +3722,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &401595759
 MonoBehaviour:
@@ -3691,7 +3757,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u5927\u982D\u9C3B"
 --- !u!222 &401595760
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3712,7 +3778,7 @@ GameObject:
   - component: {fileID: 419428827}
   - component: {fileID: 419428826}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u53F0\u7063\u9BF0"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3735,7 +3801,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &419428826
 MonoBehaviour:
@@ -3770,7 +3836,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u53F0\u7063\u9BF0"
 --- !u!222 &419428827
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3867,12 +3933,12 @@ GameObject:
   - component: {fileID: 434127887}
   - component: {fileID: 434127886}
   m_Layer: 5
-  m_Name: fish (10)
+  m_Name: "\u9B92\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &434127885
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3943,12 +4009,12 @@ GameObject:
   - component: {fileID: 472171498}
   - component: {fileID: 472171497}
   m_Layer: 5
-  m_Name: fish (10)
+  m_Name: "\u9B77\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &472171496
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4095,12 +4161,12 @@ GameObject:
   - component: {fileID: 481622753}
   - component: {fileID: 481622752}
   m_Layer: 5
-  m_Name: fish
+  m_Name: "\u8349\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &481622751
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4255,7 +4321,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &505307149
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4326,7 +4392,7 @@ GameObject:
   - component: {fileID: 511290409}
   - component: {fileID: 511290408}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Stream
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4481,7 +4547,7 @@ GameObject:
   - component: {fileID: 524809788}
   - component: {fileID: 524809787}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u53F0\u7063\u9EC3\u9C78"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4504,7 +4570,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &524809787
 MonoBehaviour:
@@ -4539,7 +4605,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u53F0\u7063\u9EC3\u9C78"
 --- !u!222 &524809788
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4560,12 +4626,12 @@ GameObject:
   - component: {fileID: 536816867}
   - component: {fileID: 536816866}
   m_Layer: 5
-  m_Name: fish (1)
+  m_Name: "\u65D7\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &536816865
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4641,7 +4707,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &537576329
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4791,7 +4857,7 @@ GameObject:
   - component: {fileID: 547984721}
   - component: {fileID: 547984720}
   m_Layer: 5
-  m_Name: fish (7)
+  m_Name: "\u9C31\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4872,7 +4938,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &554565312
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4943,7 +5009,7 @@ GameObject:
   - component: {fileID: 566804449}
   - component: {fileID: 566804448}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u6591\u99AC\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4966,7 +5032,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &566804448
 MonoBehaviour:
@@ -5001,7 +5067,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u6591\u99AC\u9B5A"
 --- !u!222 &566804449
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5101,7 +5167,7 @@ GameObject:
   - component: {fileID: 605383989}
   - component: {fileID: 605383988}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u771F\u9BC9"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5124,7 +5190,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &605383988
 MonoBehaviour:
@@ -5159,7 +5225,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u771F\u9BC9"
 --- !u!222 &605383989
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5256,12 +5322,12 @@ GameObject:
   - component: {fileID: 687228354}
   - component: {fileID: 687228353}
   m_Layer: 5
-  m_Name: fish (13)
+  m_Name: "\u771F\u9BC9"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &687228352
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5650,7 +5716,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &726760319
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5721,12 +5787,12 @@ GameObject:
   - component: {fileID: 731174530}
   - component: {fileID: 731174529}
   m_Layer: 5
-  m_Name: fish (14)
+  m_Name: "\u591A\u9C2D\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &731174528
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5797,7 +5863,7 @@ GameObject:
   - component: {fileID: 735928526}
   - component: {fileID: 735928525}
   m_Layer: 5
-  m_Name: fish (10)
+  m_Name: "\u5927\u982D\u9C3B"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5873,12 +5939,12 @@ GameObject:
   - component: {fileID: 738907458}
   - component: {fileID: 738907457}
   m_Layer: 5
-  m_Name: fish
+  m_Name: "\u9BD6\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &738907456
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6420,7 +6486,7 @@ GameObject:
   - component: {fileID: 834009535}
   - component: {fileID: 834009534}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u8349\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6443,7 +6509,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &834009534
 MonoBehaviour:
@@ -6478,7 +6544,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u8349\u9B5A"
 --- !u!222 &834009535
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6608,7 +6674,7 @@ GameObject:
   - component: {fileID: 837594566}
   - component: {fileID: 837594565}
   m_Layer: 5
-  m_Name: fish (14)
+  m_Name: "\u53F0\u7063\u9EC3\u9C78"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6842,7 +6908,7 @@ GameObject:
   - component: {fileID: 850864210}
   - component: {fileID: 850864209}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u70CF\u9C31"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6865,7 +6931,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &850864209
 MonoBehaviour:
@@ -6900,7 +6966,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u70CF\u9C31"
 --- !u!222 &850864210
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7000,12 +7066,12 @@ GameObject:
   - component: {fileID: 904976808}
   - component: {fileID: 904976807}
   m_Layer: 5
-  m_Name: fish (6)
+  m_Name: "\u9C78\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &904976806
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7231,7 +7297,7 @@ GameObject:
   - component: {fileID: 930839858}
   - component: {fileID: 930839857}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u9280\u9BAD"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7254,7 +7320,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &930839857
 MonoBehaviour:
@@ -7289,7 +7355,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u9280\u9BAD"
 --- !u!222 &930839858
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7310,7 +7376,7 @@ GameObject:
   - component: {fileID: 931230205}
   - component: {fileID: 931230204}
   m_Layer: 5
-  m_Name: fish (12)
+  m_Name: "\u5C16\u543B\u9B8E"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7386,12 +7452,12 @@ GameObject:
   - component: {fileID: 933446144}
   - component: {fileID: 933446143}
   m_Layer: 5
-  m_Name: fish (2)
+  m_Name: "\u6591\u9EDE\u9BF0"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &933446142
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7462,12 +7528,12 @@ GameObject:
   - component: {fileID: 960598346}
   - component: {fileID: 960598345}
   m_Layer: 5
-  m_Name: fish (8)
+  m_Name: "\u5927\u773C\u9BDB"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &960598344
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7769,12 +7835,12 @@ GameObject:
   - component: {fileID: 1060936802}
   - component: {fileID: 1060936801}
   m_Layer: 5
-  m_Name: fish (9)
+  m_Name: "\u9280\u9BC9"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1060936800
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7921,7 +7987,7 @@ GameObject:
   - component: {fileID: 1072754753}
   - component: {fileID: 1072754752}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u9BD6\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7944,7 +8010,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1072754752
 MonoBehaviour:
@@ -7979,7 +8045,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u9BD6\u9B5A"
 --- !u!222 &1072754753
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8000,7 +8066,7 @@ GameObject:
   - component: {fileID: 1077769855}
   - component: {fileID: 1077769854}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Seaside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8237,12 +8303,12 @@ GameObject:
   - component: {fileID: 1082697744}
   - component: {fileID: 1082697743}
   m_Layer: 5
-  m_Name: fish (11)
+  m_Name: "\u53F0\u7063\u9BF0"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1082697742
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8471,12 +8537,12 @@ GameObject:
   - component: {fileID: 1103149883}
   - component: {fileID: 1103149882}
   m_Layer: 5
-  m_Name: fish (11)
+  m_Name: "\u6D77\u9C78"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1103149881
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8547,7 +8613,7 @@ GameObject:
   - component: {fileID: 1107098091}
   - component: {fileID: 1107098090}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u9EC3\u91D1\u9BC9"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8570,7 +8636,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1107098090
 MonoBehaviour:
@@ -8605,7 +8671,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u9EC3\u91D1\u9BC9"
 --- !u!222 &1107098091
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8626,7 +8692,7 @@ GameObject:
   - component: {fileID: 1113100799}
   - component: {fileID: 1113100798}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u7D05\u6591\u9BF0"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8649,7 +8715,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1113100798
 MonoBehaviour:
@@ -8684,7 +8750,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u7D05\u6591\u9BF0"
 --- !u!222 &1113100799
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8705,7 +8771,7 @@ GameObject:
   - component: {fileID: 1124178564}
   - component: {fileID: 1124178563}
   m_Layer: 5
-  m_Name: fish (13)
+  m_Name: "\u7F8E\u6D32\u9BF0"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8781,7 +8847,7 @@ GameObject:
   - component: {fileID: 1128915135}
   - component: {fileID: 1128915134}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u9ED1\u9C78"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8804,7 +8870,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1128915134
 MonoBehaviour:
@@ -8839,7 +8905,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u9ED1\u9C78"
 --- !u!222 &1128915135
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8860,12 +8926,12 @@ GameObject:
   - component: {fileID: 1154536983}
   - component: {fileID: 1154536982}
   m_Layer: 5
-  m_Name: fish (5)
+  m_Name: "\u91D1\u76EE\u9BDB"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1154536981
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9088,7 +9154,7 @@ GameObject:
   - component: {fileID: 1180031000}
   - component: {fileID: 1180030999}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u7D05\u76EE\u9BDB"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9111,7 +9177,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1180030999
 MonoBehaviour:
@@ -9146,7 +9212,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u7D05\u76EE\u9BDB"
 --- !u!222 &1180031000
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9243,7 +9309,7 @@ GameObject:
   - component: {fileID: 1192685756}
   - component: {fileID: 1192685755}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u5927\u773C\u9BDB"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9266,7 +9332,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1192685755
 MonoBehaviour:
@@ -9301,7 +9367,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u5927\u773C\u9BDB"
 --- !u!222 &1192685756
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9322,7 +9388,7 @@ GameObject:
   - component: {fileID: 1194587666}
   - component: {fileID: 1194587665}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u65D7\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9345,7 +9411,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1194587665
 MonoBehaviour:
@@ -9380,7 +9446,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u65D7\u9B5A"
 --- !u!222 &1194587666
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9793,12 +9859,12 @@ GameObject:
   - component: {fileID: 1250055594}
   - component: {fileID: 1250055593}
   m_Layer: 5
-  m_Name: fish (13)
+  m_Name: "\u9280\u9BAD"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1250055592
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10015,7 +10081,7 @@ GameObject:
   - component: {fileID: 1258778888}
   - component: {fileID: 1258778887}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u9752\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10038,7 +10104,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1258778887
 MonoBehaviour:
@@ -10073,7 +10139,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u9752\u9B5A"
 --- !u!222 &1258778888
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10170,12 +10236,12 @@ GameObject:
   - component: {fileID: 1281905970}
   - component: {fileID: 1281905969}
   m_Layer: 5
-  m_Name: fish (9)
+  m_Name: "\u7AF9\u7B74\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1281905968
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10251,7 +10317,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1311138015
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10322,7 +10388,7 @@ GameObject:
   - component: {fileID: 1312206394}
   - component: {fileID: 1312206393}
   m_Layer: 5
-  m_Name: fish (11)
+  m_Name: "\u6A59\u5E36\u9C3B"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10632,7 +10698,7 @@ GameObject:
   - component: {fileID: 1343287228}
   - component: {fileID: 1343287227}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Lake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10795,7 +10861,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1404024160
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10866,12 +10932,12 @@ GameObject:
   - component: {fileID: 1416781086}
   - component: {fileID: 1416781085}
   m_Layer: 5
-  m_Name: fish (12)
+  m_Name: "\u9C39\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1416781084
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11176,7 +11242,7 @@ GameObject:
   - component: {fileID: 1498959716}
   - component: {fileID: 1498959715}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u9C39\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11199,7 +11265,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1498959715
 MonoBehaviour:
@@ -11234,7 +11300,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u9C39\u9B5A"
 --- !u!222 &1498959716
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11255,7 +11321,7 @@ GameObject:
   - component: {fileID: 1526253353}
   - component: {fileID: 1526253352}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u9B77\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11278,7 +11344,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1526253352
 MonoBehaviour:
@@ -11313,7 +11379,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u9B77\u9B5A"
 --- !u!222 &1526253353
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11334,7 +11400,7 @@ GameObject:
   - component: {fileID: 1526842973}
   - component: {fileID: 1526842972}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u6D77\u9C78"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11357,7 +11423,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1526842972
 MonoBehaviour:
@@ -11392,7 +11458,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u6D77\u9C78"
 --- !u!222 &1526842973
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11413,7 +11479,7 @@ GameObject:
   - component: {fileID: 1557395705}
   - component: {fileID: 1557395704}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u91D1\u76EE\u9BDB"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11436,7 +11502,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1557395704
 MonoBehaviour:
@@ -11471,7 +11537,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u91D1\u76EE\u9BDB"
 --- !u!222 &1557395705
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11650,7 +11716,7 @@ GameObject:
   - component: {fileID: 1572783525}
   - component: {fileID: 1572783524}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u9ED1\u9BF0"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11673,7 +11739,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1572783524
 MonoBehaviour:
@@ -11708,7 +11774,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u9ED1\u9BF0"
 --- !u!222 &1572783525
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11960,12 +12026,12 @@ GameObject:
   - component: {fileID: 1623141224}
   - component: {fileID: 1623141223}
   m_Layer: 5
-  m_Name: fish (6)
+  m_Name: "\u5433\u90ED\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1623141222
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12115,7 +12181,7 @@ GameObject:
   - component: {fileID: 1666665193}
   - component: {fileID: 1666665192}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u5C16\u543B\u9B8E"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12138,7 +12204,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1666665192
 MonoBehaviour:
@@ -12173,7 +12239,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u5C16\u543B\u9B8E"
 --- !u!222 &1666665193
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12273,7 +12339,7 @@ GameObject:
   - component: {fileID: 1674089671}
   - component: {fileID: 1674089670}
   m_Layer: 5
-  m_Name: fish (9)
+  m_Name: "\u9ED1\u9C78"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12430,7 +12496,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1684745620
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12580,7 +12646,7 @@ GameObject:
   - component: {fileID: 1721580112}
   - component: {fileID: 1721580111}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u9B92\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12603,7 +12669,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1721580111
 MonoBehaviour:
@@ -12638,7 +12704,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u9B92\u9B5A"
 --- !u!222 &1721580112
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12659,12 +12725,12 @@ GameObject:
   - component: {fileID: 1732484135}
   - component: {fileID: 1732484134}
   m_Layer: 5
-  m_Name: fish (4)
+  m_Name: "\u8D64\u9BDB"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1732484133
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12735,7 +12801,7 @@ GameObject:
   - component: {fileID: 1749231767}
   - component: {fileID: 1749231766}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u9577\u543B\u9BDB"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12758,7 +12824,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1749231766
 MonoBehaviour:
@@ -12793,7 +12859,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u9577\u543B\u9BDB"
 --- !u!222 &1749231767
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12819,7 +12885,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1749583297
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12890,7 +12956,7 @@ GameObject:
   - component: {fileID: 1762216163}
   - component: {fileID: 1762216162}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u9280\u9BC9"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12913,7 +12979,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1762216162
 MonoBehaviour:
@@ -12948,7 +13014,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u9280\u9BC9"
 --- !u!222 &1762216163
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12969,12 +13035,12 @@ GameObject:
   - component: {fileID: 1768308306}
   - component: {fileID: 1768308305}
   m_Layer: 5
-  m_Name: fish (3)
+  m_Name: "\u77F3\u6591\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1768308304
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13050,7 +13116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1778963858
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13121,7 +13187,7 @@ GameObject:
   - component: {fileID: 1797757227}
   - component: {fileID: 1797757226}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u53F0\u7063\u9326\u9BC9"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13144,7 +13210,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1797757226
 MonoBehaviour:
@@ -13179,7 +13245,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u53F0\u7063\u9326\u9BC9"
 --- !u!222 &1797757227
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13279,7 +13345,7 @@ GameObject:
   - component: {fileID: 1810462932}
   - component: {fileID: 1810462931}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u9BDB\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13302,7 +13368,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1810462931
 MonoBehaviour:
@@ -13337,7 +13403,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u9BDB\u9B5A"
 --- !u!222 &1810462932
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13510,7 +13576,7 @@ GameObject:
   - component: {fileID: 1837491950}
   - component: {fileID: 1837491949}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u6591\u9EDE\u9BF0"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13533,7 +13599,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1837491949
 MonoBehaviour:
@@ -13568,7 +13634,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u6591\u9EDE\u9BF0"
 --- !u!222 &1837491950
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13589,6 +13655,7 @@ GameObject:
   - component: {fileID: 1837627133}
   - component: {fileID: 1837627132}
   - component: {fileID: 1837627131}
+  - component: {fileID: 1837627134}
   m_Layer: 5
   m_Name: Lake
   m_TagString: Untagged
@@ -13659,7 +13726,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1837627132}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1837627134}
+        m_TargetAssemblyTypeName: illustrateBookOpen, Assembly-CSharp
+        m_MethodName: OpenFishData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1837627132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13698,6 +13777,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1837627129}
   m_CullTransparentMesh: 1
+--- !u!114 &1837627134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837627129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a770b19ef1a3c74d8ccbba7d11704e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theButtonText: {fileID: 1343287227}
+  elseButtonText:
+  - {fileID: 511290408}
+  - {fileID: 1077769854}
+  theFishData: {fileID: 1959332909}
+  elseFishData:
+  - {fileID: 224782459}
+  - {fileID: 1951522111}
 --- !u!1 &1868607509
 GameObject:
   m_ObjectHideFlags: 0
@@ -13786,12 +13885,12 @@ GameObject:
   - component: {fileID: 1886199513}
   - component: {fileID: 1886199512}
   m_Layer: 5
-  m_Name: fish (7)
+  m_Name: "\u9B6F\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1886199511
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13862,7 +13961,7 @@ GameObject:
   - component: {fileID: 1908303479}
   - component: {fileID: 1908303478}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u8D64\u9BDB"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13885,7 +13984,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1908303478
 MonoBehaviour:
@@ -13920,7 +14019,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u8D64\u9BDB"
 --- !u!222 &1908303479
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14099,12 +14198,12 @@ GameObject:
   - component: {fileID: 1933966212}
   - component: {fileID: 1933966211}
   m_Layer: 5
-  m_Name: fish (1)
+  m_Name: "\u7D05\u76EE\u9BDB"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1933966210
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14175,12 +14274,12 @@ GameObject:
   - component: {fileID: 1946251381}
   - component: {fileID: 1946251380}
   m_Layer: 5
-  m_Name: fish (12)
+  m_Name: "\u9EC3\u91D1\u9BC9"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1946251379
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14624,7 +14723,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1977293680
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14695,7 +14794,7 @@ GameObject:
   - component: {fileID: 1997579949}
   - component: {fileID: 1997579948}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u9BD4\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14718,7 +14817,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1997579948
 MonoBehaviour:
@@ -14753,7 +14852,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u9BD4\u9B5A"
 --- !u!222 &1997579949
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15016,7 +15115,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2071898093
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15092,7 +15191,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2073825765
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15239,7 +15338,7 @@ GameObject:
   - component: {fileID: 2083248787}
   - component: {fileID: 2083248786}
   m_Layer: 5
-  m_Name: fish (6)
+  m_Name: "\u9BD4\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15320,7 +15419,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2102111581
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15391,12 +15490,12 @@ GameObject:
   - component: {fileID: 2119421123}
   - component: {fileID: 2119421122}
   m_Layer: 5
-  m_Name: fish (8)
+  m_Name: "\u7D05\u6591\u9BF0"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2119421121
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15467,7 +15566,7 @@ GameObject:
   - component: {fileID: 2124606723}
   - component: {fileID: 2124606722}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: "\u9B6F\u9B5A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15490,7 +15589,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 160, y: 100}
+  m_SizeDelta: {x: 80, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2124606722
 MonoBehaviour:
@@ -15525,7 +15624,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F0\u7063\u767D\u9B5A"
+  m_Text: "\u9B6F\u9B5A"
 --- !u!222 &2124606723
 CanvasRenderer:
   m_ObjectHideFlags: 0
