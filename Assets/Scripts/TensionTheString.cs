@@ -35,6 +35,7 @@ public class TensionTheString : MonoBehaviour, IPointerDownHandler, IPointerUpHa
             if (continueTime >= showLooseTime)
             {
                 theFishStatus.text = "-- 鬆 --";
+                theFishStatus.color = Color.black;
                 continueTime = 0; 
                 withdrawButton.SetActive(true);
                 Debug.Log("-- 鬆 --");
@@ -45,8 +46,9 @@ public class TensionTheString : MonoBehaviour, IPointerDownHandler, IPointerUpHa
             continueTime += Time.deltaTime;
             if (continueTime >= showTensionTime)
             {
-                theFishStatus.text = "-- 緊 --";
-                Debug.Log("-- 緊 --");
+                theFishStatus.text = "== 緊 ==";
+                theFishStatus.color = Color.red;
+                Debug.Log("== 緊 ==");
                 fishReadyEscapeTime += Time.deltaTime;
                 if (fishReadyEscapeTime >= showFishEscapeTime)
                 {
@@ -55,6 +57,7 @@ public class TensionTheString : MonoBehaviour, IPointerDownHandler, IPointerUpHa
                     this.gameObject.SetActive(false);
                     //theDistance.text = "";
                     theFishStatus.text = "逃跑了...";
+                    theFishStatus.color = Color.black;
                     Debug.Log("逃跑了...");
                     continueTime = 0;
                     fishReadyEscapeTime = 0;
@@ -73,7 +76,8 @@ public class TensionTheString : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     {
         isTension = true;
         isturnbackTension = false ;
-        theFishStatus.text = "-- 緊 --";
+        theFishStatus.text = "== 緊 ==";
+        theFishStatus.color = Color.red;
         theFish.GetComponent<Text>().text = "?";
 
     }

@@ -493,6 +493,14 @@ MonoBehaviour:
   throwDistance: {fileID: 1479680063}
   theFishStatus: {fileID: 653701414}
   theFish: {fileID: 1905892187}
+  notFishCmdButton:
+  - {fileID: 1255697326}
+  - {fileID: 1531361990}
+  - {fileID: 1106754478}
+  - {fileID: 1065680989}
+  - {fileID: 983540727}
+  - {fileID: 357641394}
+  - {fileID: 1399584560}
 --- !u!1 &134550006
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,7 +513,7 @@ GameObject:
   - component: {fileID: 134550009}
   - component: {fileID: 134550008}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: GoodPoleName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -563,7 +571,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u597D\u91E3\u7AFF"
+  m_Text: '?'
 --- !u!222 &134550009
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -584,7 +592,7 @@ GameObject:
   - component: {fileID: 141738409}
   - component: {fileID: 141738408}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: ProHookName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -642,7 +650,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u9AD8\u7D1A\n\u9B5A\u9264"
+  m_Text: '?'
 --- !u!222 &141738409
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -797,6 +805,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acff991bdcfd5314f93bd6d2cb92334a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buyEquipmentName: "\u597D\u91E3\u7DDA"
+  textBuyEquipmentName: {fileID: 1858909961}
   equipmentName: {fileID: 367539024}
   equipments:
   - {fileID: 675318284}
@@ -1271,7 +1281,7 @@ GameObject:
   - component: {fileID: 249875026}
   - component: {fileID: 249875025}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Num5Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1329,7 +1339,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u9B5A\u990C5\u865F"
+  m_Text: '?'
 --- !u!222 &249875026
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1921,6 +1931,14 @@ MonoBehaviour:
   theFish: {fileID: 1905892187}
   theFishPirce: {fileID: 553177384}
   money: {fileID: 787515151}
+  notFishCmdButton:
+  - {fileID: 1255697326}
+  - {fileID: 1531361990}
+  - {fileID: 1106754478}
+  - {fileID: 1065680989}
+  - {fileID: 983540727}
+  - {fileID: 357641394}
+  - {fileID: 1399584560}
 --- !u!1 &457807225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2067,6 +2085,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acff991bdcfd5314f93bd6d2cb92334a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buyEquipmentName: "\u9B5A\u990C2\u865F"
+  textBuyEquipmentName: {fileID: 681504062}
   equipmentName: {fileID: 1311141829}
   equipments:
   - {fileID: 1515464554}
@@ -2085,7 +2105,7 @@ GameObject:
   - component: {fileID: 509385658}
   - component: {fileID: 509385657}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: GoodHookName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2143,7 +2163,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u597D\u9B5A\u9264"
+  m_Text: '?'
 --- !u!222 &509385658
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2711,6 +2731,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acff991bdcfd5314f93bd6d2cb92334a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buyEquipmentName: "\u666E\u901A\u91E3\u7DDA"
+  textBuyEquipmentName: {fileID: 64632664}
   equipmentName: {fileID: 367539024}
   equipments:
   - {fileID: 169733230}
@@ -2861,6 +2883,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acff991bdcfd5314f93bd6d2cb92334a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buyEquipmentName: "\u9B5A\u990C3\u865F"
+  textBuyEquipmentName: {fileID: 1215592753}
   equipmentName: {fileID: 1311141829}
   equipments:
   - {fileID: 1515464554}
@@ -2879,7 +2903,7 @@ GameObject:
   - component: {fileID: 681504063}
   - component: {fileID: 681504062}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Num2Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3092,6 +3116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acff991bdcfd5314f93bd6d2cb92334a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buyEquipmentName: "\u9AD8\u7D1A\u91E3\u7DDA"
+  textBuyEquipmentName: {fileID: 1185545455}
   equipmentName: {fileID: 367539024}
   equipments:
   - {fileID: 675318284}
@@ -3107,6 +3133,7 @@ GameObject:
   - component: {fileID: 787515150}
   - component: {fileID: 787515152}
   - component: {fileID: 787515151}
+  - component: {fileID: 787515153}
   m_Layer: 5
   m_Name: realMoney
   m_TagString: Untagged
@@ -3175,6 +3202,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787515149}
   m_CullTransparentMesh: 1
+--- !u!114 &787515153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787515149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 353ddae0b97940c4483a1142d262120a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &806110991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 806110992}
+  - component: {fileID: 806110993}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &806110992
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806110991}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 230, y: 973, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &806110993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806110991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d08a57371fb094439ba4c4a69028157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isdeleteAllSaveData: 0
 --- !u!1 &811719985
 GameObject:
   m_ObjectHideFlags: 0
@@ -4720,7 +4804,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1106754481}
-        m_TargetAssemblyTypeName: NextStage, Assembly-CSharp
+        m_TargetAssemblyTypeName: EnterStore, Assembly-CSharp
         m_MethodName: NextScene
         m_Mode: 5
         m_Arguments:
@@ -4778,9 +4862,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1106754476}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1627b9e5ad5e934fa2f011638145384, type: 3}
+  m_Script: {fileID: 11500000, guid: 5162e43fcc276484484a400b7d0ba3df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  equipmentName:
+  - {fileID: 134550008}
+  - {fileID: 1156253456}
+  - {fileID: 1858909961}
+  - {fileID: 1185545455}
+  - {fileID: 509385657}
+  - {fileID: 141738408}
+  - {fileID: 1784502807}
+  - {fileID: 249875025}
+  Money: {fileID: 787515151}
 --- !u!1 &1117882163
 GameObject:
   m_ObjectHideFlags: 0
@@ -4872,7 +4966,7 @@ GameObject:
   - component: {fileID: 1156253457}
   - component: {fileID: 1156253456}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: ProPoleName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4930,7 +5024,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u9AD8\u7D1A\n\u91E3\u7AFF"
+  m_Text: '?'
 --- !u!222 &1156253457
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5085,6 +5179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acff991bdcfd5314f93bd6d2cb92334a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buyEquipmentName: "\u666E\u901A\u9B5A\u9264"
+  textBuyEquipmentName: {fileID: 141738408}
   equipmentName: {fileID: 1486960391}
   equipments:
   - {fileID: 2061532028}
@@ -5140,7 +5236,7 @@ GameObject:
   - component: {fileID: 1185545456}
   - component: {fileID: 1185545455}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: ProStringName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5198,7 +5294,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u9AD8\u7D1A\n\u91E3\u7DDA"
+  m_Text: '?'
 --- !u!222 &1185545456
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5298,7 +5394,7 @@ GameObject:
   - component: {fileID: 1215592754}
   - component: {fileID: 1215592753}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Num3Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6122,6 +6218,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acff991bdcfd5314f93bd6d2cb92334a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buyEquipmentName: "\u597D\u91E3\u7AFF"
+  textBuyEquipmentName: {fileID: 134550008}
   equipmentName: {fileID: 1914578516}
   equipments:
   - {fileID: 1672300951}
@@ -6939,6 +7037,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acff991bdcfd5314f93bd6d2cb92334a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buyEquipmentName: "\u9B5A\u990C5\u865F"
+  textBuyEquipmentName: {fileID: 249875025}
   equipmentName: {fileID: 1311141829}
   equipments:
   - {fileID: 1515464554}
@@ -7091,6 +7191,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acff991bdcfd5314f93bd6d2cb92334a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buyEquipmentName: "\u9B5A\u990C1\u865F"
+  textBuyEquipmentName: {fileID: 2035450035}
   equipmentName: {fileID: 1311141829}
   equipments:
   - {fileID: 457807227}
@@ -7261,7 +7363,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1535953986
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7736,6 +7838,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acff991bdcfd5314f93bd6d2cb92334a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buyEquipmentName: "\u9AD8\u7D1A\u91E3\u7AFF"
+  textBuyEquipmentName: {fileID: 1156253456}
   equipmentName: {fileID: 1914578516}
   equipments:
   - {fileID: 1672300951}
@@ -7965,6 +8069,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acff991bdcfd5314f93bd6d2cb92334a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buyEquipmentName: "\u9B5A\u990C4\u865F"
+  textBuyEquipmentName: {fileID: 1784502807}
   equipmentName: {fileID: 1311141829}
   equipments:
   - {fileID: 1515464554}
@@ -8117,6 +8223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acff991bdcfd5314f93bd6d2cb92334a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buyEquipmentName: "\u666E\u901A\u91E3\u7AFF"
+  textBuyEquipmentName: {fileID: 1377976179}
   equipmentName: {fileID: 1914578516}
   equipments:
   - {fileID: 1315799751}
@@ -8467,6 +8575,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acff991bdcfd5314f93bd6d2cb92334a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buyEquipmentName: "\u9AD8\u7D1A\u9B5A\u9264"
+  textBuyEquipmentName: {fileID: 141738408}
   equipmentName: {fileID: 1486960391}
   equipments:
   - {fileID: 1158726137}
@@ -8719,7 +8829,7 @@ GameObject:
   - component: {fileID: 1784502808}
   - component: {fileID: 1784502807}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Num4Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8777,7 +8887,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u9B5A\u990C4\u865F"
+  m_Text: '?'
 --- !u!222 &1784502808
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8969,7 +9079,7 @@ GameObject:
   - component: {fileID: 1858909962}
   - component: {fileID: 1858909961}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: GoodStringName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9027,7 +9137,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u597D\u91E3\u7DDA"
+  m_Text: '?'
 --- !u!222 &1858909962
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9285,7 +9395,7 @@ GameObject:
   - component: {fileID: 2035450036}
   - component: {fileID: 2035450035}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Num1Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9498,6 +9608,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acff991bdcfd5314f93bd6d2cb92334a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buyEquipmentName: "\u597D\u9B5A\u9264"
+  textBuyEquipmentName: {fileID: 509385657}
   equipmentName: {fileID: 1486960391}
   equipments:
   - {fileID: 1158726137}
@@ -9509,3 +9621,4 @@ SceneRoots:
   - {fileID: 209916196}
   - {fileID: 837149725}
   - {fileID: 928152062}
+  - {fileID: 806110992}

@@ -16,6 +16,10 @@ public class GetFish : MonoBehaviour
     [SerializeField,Header("擁有金錢")]
     public Text money;
     int moneyCalculate;
+
+    [SerializeField, Header("UI按鈕")]
+    public Button[] notFishCmdButton;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -40,5 +44,9 @@ public class GetFish : MonoBehaviour
         moneyCalculate += 8;
         string newMoney = moneyCalculate.ToString();
         money.text = newMoney;
+        foreach (Button button in notFishCmdButton)
+        {
+            button.interactable = true;
+        }
     }
 }

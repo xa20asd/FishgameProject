@@ -14,6 +14,9 @@ public class KeyupThrow : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public GameObject theFishStatus;
     public GameObject theFish;
 
+    [SerializeField, Header("UI按鈕")]
+    public Button[] notFishCmdButton;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,6 +42,10 @@ public class KeyupThrow : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         throwbutton.SetActive(false);
         TheFishInfo isReStarFishComeTime = FindAnyObjectByType<TheFishInfo>();
         isReStarFishComeTime.reStartFishComingTime();
+        foreach (Button button in notFishCmdButton)
+        {
+            button.interactable = false;
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)

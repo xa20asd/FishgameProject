@@ -1,14 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class FishAreainfo : MonoBehaviour
+public class MoneyInfo : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        string fishareainfo = PlayerPrefs.GetString("fisharea");
-        GetComponent<Text>().text = fishareainfo;
-        Debug.Log(fishareainfo);
+        this.GetComponent<Text>().text = PlayerPrefs.GetInt("RealMoney", 0).ToString();
     }
 
     // Update is called once per frame

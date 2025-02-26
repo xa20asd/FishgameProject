@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
-public class FishAreainfo : MonoBehaviour
+public class GamgManager : MonoBehaviour
 {
+    public bool isdeleteAllSaveData;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        string fishareainfo = PlayerPrefs.GetString("fisharea");
-        GetComponent<Text>().text = fishareainfo;
-        Debug.Log(fishareainfo);
+        if (isdeleteAllSaveData)
+        { 
+            PlayerPrefs.DeleteAll();
+        }
     }
 
     // Update is called once per frame

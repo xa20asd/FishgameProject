@@ -19,7 +19,7 @@ public class NextStage : MonoBehaviour
 
     public void NextScene(string nextscenename) 
     {
-        //nextSceneName = nextscenename;
+        
         SceneManager.LoadScene(nextscenename);
     }
 }
