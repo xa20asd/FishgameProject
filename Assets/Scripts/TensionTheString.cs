@@ -21,9 +21,7 @@ public class TensionTheString : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        showLooseTime = Random.Range(earlyTime, laterTime);
-        showTensionTime = Random.Range(earlyTime, laterTime);
-        showFishEscapeTime = Random.Range(earlyTime, laterTime);
+        
     }
 
     // Update is called once per frame
@@ -31,6 +29,7 @@ public class TensionTheString : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     {
         if (isTension)
         {
+            showLooseTime = Random.Range(earlyTime, laterTime);
             continueTime += Time.deltaTime;
             if (continueTime >= showLooseTime)
             {
@@ -42,13 +41,15 @@ public class TensionTheString : MonoBehaviour, IPointerDownHandler, IPointerUpHa
             }
         }
         if (isturnbackTension) 
-        { 
+        {
+            showTensionTime = Random.Range(earlyTime, laterTime);
             continueTime += Time.deltaTime;
             if (continueTime >= showTensionTime)
             {
                 theFishStatus.text = "== 緊 ==";
                 theFishStatus.color = Color.red;
                 Debug.Log("== 緊 ==");
+                showFishEscapeTime = Random.Range(earlyTime, laterTime);
                 fishReadyEscapeTime += Time.deltaTime;
                 if (fishReadyEscapeTime >= showFishEscapeTime)
                 {

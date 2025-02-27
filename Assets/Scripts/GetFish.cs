@@ -47,6 +47,7 @@ public class GetFish : MonoBehaviour
         this.gameObject.SetActive(false);
         moneyCalculate += int.Parse(realFishPrice.GetComponent<Text>().text);
         money.text = moneyCalculate.ToString();
+        PlayerPrefs.SetInt("RealMoney", int.Parse(money.text));
         foreach (Button button in notFishCmdButton)
         {
             button.interactable = true;

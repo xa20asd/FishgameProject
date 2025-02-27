@@ -626,7 +626,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u597D\u91E3\u7AFF"
+  m_Text: '?'
 --- !u!222 &134550009
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -705,7 +705,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u9AD8\u7D1A\u9B5A\u9264"
+  m_Text: '?'
 --- !u!222 &141738409
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2219,7 +2219,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u597D\u9B5A\u9264"
+  m_Text: '?'
 --- !u!222 &509385658
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2641,7 +2641,7 @@ MonoBehaviour:
   theShowTime: 0
   waitingTime: 0
   tensionButton: {fileID: 832326538}
-  hook: {fileID: 0}
+  hook: {fileID: 1486960391}
   goodHookAdjustTheShowTime: 3
   proHookAdjustTheShowTime: 6
 --- !u!1 &675318282
@@ -4942,7 +4942,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1106754481}
-        m_TargetAssemblyTypeName: EnterStore, Assembly-CSharp
+        m_TargetAssemblyTypeName: NextStage, Assembly-CSharp
         m_MethodName: NextScene
         m_Mode: 5
         m_Arguments:
@@ -5000,19 +5000,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1106754476}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5162e43fcc276484484a400b7d0ba3df, type: 3}
+  m_Script: {fileID: 11500000, guid: d1627b9e5ad5e934fa2f011638145384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  equipmentName:
-  - {fileID: 134550008}
-  - {fileID: 1156253456}
-  - {fileID: 1858909961}
-  - {fileID: 1185545455}
-  - {fileID: 509385657}
-  - {fileID: 141738408}
-  - {fileID: 1784502807}
-  - {fileID: 249875025}
-  Money: {fileID: 787515151}
 --- !u!1 &1117882163
 GameObject:
   m_ObjectHideFlags: 0
@@ -5162,7 +5152,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u9AD8\u7D1A\u91E3\u7AFF"
+  m_Text: '?'
 --- !u!222 &1156253457
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5432,7 +5422,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u9AD8\u7D1A\u91E3\u7DDA"
+  m_Text: '?'
 --- !u!222 &1185545456
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5826,7 +5816,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1627b9e5ad5e934fa2f011638145384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Money: {fileID: 787515151}
 --- !u!1 &1261647890
 GameObject:
   m_ObjectHideFlags: 0
@@ -7484,7 +7473,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1627b9e5ad5e934fa2f011638145384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Money: {fileID: 787515151}
 --- !u!1 &1535953985
 GameObject:
   m_ObjectHideFlags: 0
@@ -9278,7 +9266,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u597D\u91E3\u7DDA"
+  m_Text: '?'
 --- !u!222 &1858909962
 CanvasRenderer:
   m_ObjectHideFlags: 0

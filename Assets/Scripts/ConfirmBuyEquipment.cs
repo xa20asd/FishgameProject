@@ -18,8 +18,8 @@ public class ConfirmBuyEquipment : MonoBehaviour
     public GameObject[] sellEquipments;
 
     [SerializeField, Header("購買文字提示")]
-    public Text Money;
-    public Text MoneyStatus;
+    public Text money;
+    public Text moneyStatus;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,7 +34,7 @@ public class ConfirmBuyEquipment : MonoBehaviour
     }
     public void confirm()
     {
-        int textMoney = int.Parse(Money.text);
+        int textMoney = int.Parse(money.text);
         
         for (int i = 0; i < sellEquipments.Length; i++)
         {
@@ -45,9 +45,9 @@ public class ConfirmBuyEquipment : MonoBehaviour
                 if (textMoney >= thesellprice)
                 { 
                     int newMoney = textMoney - thesellprice;
-                    Money.text = newMoney.ToString();
-                    MoneyStatus.gameObject.SetActive(true);
-                    MoneyStatus.text = "成功購買";
+                    money.text = newMoney.ToString();
+                    moneyStatus.gameObject.SetActive(true);
+                    moneyStatus.text = "成功購買";
                     sellEquipments[i].gameObject.tag = "buy";
                     sellEquipments[i].GetComponent<Image>().color = new Color(190.0f / 255.0f, 255.0f / 255.0f, 230.0f / 255.0f);
                     equipmentList.Add(thebuyequipment);
@@ -64,8 +64,8 @@ public class ConfirmBuyEquipment : MonoBehaviour
                 }
                 else
                 {
-                    MoneyStatus.gameObject.SetActive(true);
-                    MoneyStatus.text = "金額不足";
+                    moneyStatus.gameObject.SetActive(true);
+                    moneyStatus.text = "金額不足";
                 }
             }
         }

@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 public class EnterStore : MonoBehaviour
 {
-    List<string> equipmentNameList = new List<string>();
+    //List<string> equipmentNameList = new List<string>();
 
-    [SerializeField, Header("已顯示擁有的裝備")]
-    public Text[] equipmentName;
+    //[SerializeField, Header("已顯示擁有的裝備")]
+    //public Text[] equipmentName;
 
     [SerializeField, Header("擁有金錢")]
-    public Text Money;
+    public Text money;
      
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,7 +28,7 @@ public class EnterStore : MonoBehaviour
 
     public void NextScene(string nextscenename)
     {
-        PlayerPrefs.SetInt("RealMoney", int.Parse(Money.text));
+        PlayerPrefs.SetInt("RealMoney", int.Parse(money.text));
         #region 使用json方法接收資料轉換場景
         //for (int i = 0; i < equipmentName.Length; i++)
         //{
