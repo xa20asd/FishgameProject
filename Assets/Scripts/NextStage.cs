@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class NextStage : MonoBehaviour
 {
-    //public string nextSceneName;
+    [SerializeField, Header("擁有金錢")]
+    public Text Money;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,7 +21,7 @@ public class NextStage : MonoBehaviour
 
     public void NextScene(string nextscenename) 
     {
-        
+        PlayerPrefs.SetInt("RealMoney", int.Parse(Money.text));
         SceneManager.LoadScene(nextscenename);
     }
 }

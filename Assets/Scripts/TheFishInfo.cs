@@ -15,6 +15,17 @@ public class TheFishInfo : MonoBehaviour
     [SerializeField, Header("釣竿動作")]
     public GameObject tensionButton;
 
+    [SerializeField, Header("釣魚裝備")]
+    [Header("魚鉤")]
+    public Text hook;
+
+    [SerializeField, Header("釣魚參數調整")]
+    [Header("魚鉤")]
+    public float goodHookAdjustTheShowTime;
+    public float proHookAdjustTheShowTime;
+    float firstgoodHookAdjustTheShowTime;
+    float firstproHookAdjustTheShowTime;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,6 +33,8 @@ public class TheFishInfo : MonoBehaviour
         //theShowTime = Random.Range(earlyShow, laterShow);
         //isFishComing = true;
         //StartCoroutine(ShowTheFishStatus());
+        firstgoodHookAdjustTheShowTime = goodHookAdjustTheShowTime;
+        firstproHookAdjustTheShowTime = proHookAdjustTheShowTime;
     }
 
     //IEnumerator ShowTheFishStatus()
@@ -52,6 +65,31 @@ public class TheFishInfo : MonoBehaviour
     public void reStartFishComingTime()
     {
         isFishComing = true;
+        if (hook.text != "普通魚鉤")
+        {
+            AdjustTheShowTime(hook.text);
+            earlyShow = earlyShow - goodHookAdjustTheShowTime - proHookAdjustTheShowTime;
+            laterShow = laterShow - goodHookAdjustTheShowTime - proHookAdjustTheShowTime;
+        }
         theShowTime = Random.Range(earlyShow, laterShow);
+    }
+    void AdjustTheShowTime(string equipmentname)
+    {
+        if (equipmentname != "好魚鉤")
+        {
+            goodHookAdjustTheShowTime = 0;
+        }
+        else 
+        {
+            goodHookAdjustTheShowTime = firstgoodHookAdjustTheShowTime;
+        }
+        if (equipmentname != "高級魚鉤")
+        {
+            proHookAdjustTheShowTime = 0;
+        }
+        else
+        {
+            proHookAdjustTheShowTime = firstproHookAdjustTheShowTime;
+        }
     }
 }

@@ -337,9 +337,13 @@ MonoBehaviour:
   theFish: {fileID: 1905892189}
   theFishPrice: {fileID: 553177384}
   realFishPrice: {fileID: 922039921}
-  adjustWithdrawTime: 0.5
+  withdrawSpeed: 0.5
   withdrawdistance: 0
   isWithdrawing: 0
+  pole: {fileID: 1914578516}
+  poleString: {fileID: 367539024}
+  hook: {fileID: 1486960391}
+  bait: {fileID: 1311141829}
   throwString: {fileID: 119278119}
   tensionButton: {fileID: 832326538}
   withdrawButton: {fileID: 106988578}
@@ -350,6 +354,50 @@ MonoBehaviour:
   fishingP2: 60
   fishingP3: 45
   fishingP4: 25
+  goodPolefishingP1up: 12
+  goodPolefishingP2up: 9
+  goodPolefishingP3up: 6
+  goodPolefishingP4up: 3
+  goodPoleadjustrangMaxUp: 30
+  goodPoleWithdrawSpeedUp: 0.7
+  proPolefishingP1up: 28
+  proPolefishingP2up: 21
+  proPolefishingP3up: 14
+  proPolefishingP4up: 7
+  proPoleadjustrangMaxUp: 70
+  proPoleWithdrawSpeedUp: 1.1
+  goodStringWithdrawSpeedUp: 0.7
+  proStringWithdrawSpeedUp: 1.1
+  goodHookfishingP1up: 16
+  goodHookfishingP2up: 12
+  goodHookfishingP3up: 8
+  goodHookfishingP4up: 4
+  goodHookadjustrangMaxUp: 40
+  proHookfishingP1up: 40
+  proHookfishingP2up: 30
+  proHookfishingP3up: 20
+  proHookfishingP4up: 10
+  proHookadjustrangMaxUp: 100
+  bait2fishingP1up: 6
+  bait2fishingP2up: -2
+  bait2fishingP3up: 10
+  bait2fishingP4up: -10
+  bait2adjustrangMaxUp: 4
+  bait3fishingP1up: -8
+  bait3fishingP2up: -2
+  bait3fishingP3up: -3
+  bait3fishingP4up: 4
+  bait3adjustrangMaxUp: -12
+  bait4fishingP1up: 2
+  bait4fishingP2up: -3
+  bait4fishingP3up: 0
+  bait4fishingP4up: 9
+  bait4adjustrangMaxUp: 8
+  bait5fishingP1up: -4
+  bait5fishingP2up: -5
+  bait5fishingP3up: 5
+  bait5fishingP4up: -9
+  bait5adjustrangMaxUp: -13
 --- !u!1 &119278119
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,7 +626,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '?'
+  m_Text: "\u597D\u91E3\u7AFF"
 --- !u!222 &134550009
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -657,7 +705,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '?'
+  m_Text: "\u9AD8\u7D1A\u9B5A\u9264"
 --- !u!222 &141738409
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2171,7 +2219,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '?'
+  m_Text: "\u597D\u9B5A\u9264"
 --- !u!222 &509385658
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2588,11 +2636,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bf5871758dc7aa47b9c6cecf864f7d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  earlyShow: 5
-  laterShow: 15
+  earlyShow: 8
+  laterShow: 20
   theShowTime: 0
   waitingTime: 0
   tensionButton: {fileID: 832326538}
+  hook: {fileID: 0}
+  goodHookAdjustTheShowTime: 3
+  proHookAdjustTheShowTime: 6
 --- !u!1 &675318282
 GameObject:
   m_ObjectHideFlags: 0
@@ -3071,7 +3122,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: "\u9AD8\u7D1A\u9B5A\u7DDA"
+          m_StringArgument: "\u9AD8\u7D1A\u91E3\u7DDA"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &764462142
@@ -5111,7 +5162,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '?'
+  m_Text: "\u9AD8\u7D1A\u91E3\u7AFF"
 --- !u!222 &1156253457
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5381,7 +5432,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '?'
+  m_Text: "\u9AD8\u7D1A\u91E3\u7DDA"
 --- !u!222 &1185545456
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5775,6 +5826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1627b9e5ad5e934fa2f011638145384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Money: {fileID: 787515151}
 --- !u!1 &1261647890
 GameObject:
   m_ObjectHideFlags: 0
@@ -7432,6 +7484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1627b9e5ad5e934fa2f011638145384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Money: {fileID: 787515151}
 --- !u!1 &1535953985
 GameObject:
   m_ObjectHideFlags: 0
@@ -9225,7 +9278,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '?'
+  m_Text: "\u597D\u91E3\u7DDA"
 --- !u!222 &1858909962
 CanvasRenderer:
   m_ObjectHideFlags: 0

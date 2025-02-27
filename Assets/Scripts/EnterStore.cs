@@ -28,8 +28,7 @@ public class EnterStore : MonoBehaviour
 
     public void NextScene(string nextscenename)
     {
-        int realMoney = int.Parse(Money.text);
-        PlayerPrefs.SetInt("RealMoney", realMoney);
+        PlayerPrefs.SetInt("RealMoney", int.Parse(Money.text));
         #region 使用json方法接收資料轉換場景
         //for (int i = 0; i < equipmentName.Length; i++)
         //{

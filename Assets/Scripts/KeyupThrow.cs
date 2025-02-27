@@ -7,7 +7,7 @@ using Unity.Collections;
 public class KeyupThrow : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     public bool isButtonPressed;
-    float throwTime = 5.0f;
+    float throwTime = 1.0f;
     public Text throwDistance;
 
     [SerializeField, Header ("魚類info")]
@@ -16,6 +16,7 @@ public class KeyupThrow : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     [SerializeField, Header("UI按鈕")]
     public Button[] notFishCmdButton;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -28,8 +29,13 @@ public class KeyupThrow : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     void Update()
     {
         if (isButtonPressed)
-        {   
+        {
             throwTime += Time.deltaTime;
+            if (throwTime >= 10.0f)
+            {
+                throwTime = 10.0f;
+                isButtonPressed = false;
+            }
             string throwdistance = throwTime.ToString("F1");
             throwDistance.text = throwdistance;
         }
@@ -55,7 +61,7 @@ public class KeyupThrow : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         theFish.SetActive(false);
         theFish.GetComponent<Text>().text = "";
         Debug.Log("已甩出釣線");
-        throwTime = 5.0f;  
+        throwTime = 1.0f;  
     }
 
     public void OnPointerUp(PointerEventData eventData)

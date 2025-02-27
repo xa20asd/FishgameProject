@@ -12,7 +12,7 @@ public class FishingEquipmentSelect : MonoBehaviour
     public Text textBuyEquipmentName;
     //private string filepath;
 
-    [SerializeField, Header("裝備選擇")]
+    [SerializeField, Header("裝備選擇顯示")]
     public Text equipmentName;
 
     [SerializeField, Header("其他按鈕")]
