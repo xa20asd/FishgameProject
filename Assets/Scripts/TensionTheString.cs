@@ -29,7 +29,6 @@ public class TensionTheString : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     {
         if (isTension)
         {
-            showLooseTime = Random.Range(earlyTime, laterTime);
             continueTime += Time.deltaTime;
             if (continueTime >= showLooseTime)
             {
@@ -38,24 +37,24 @@ public class TensionTheString : MonoBehaviour, IPointerDownHandler, IPointerUpHa
                 continueTime = 0; 
                 withdrawButton.SetActive(true);
                 Debug.Log("-- 鬆 --");
+                isTension = false;
             }
         }
         if (isturnbackTension) 
         {
-            showTensionTime = Random.Range(earlyTime, laterTime);
             continueTime += Time.deltaTime;
             if (continueTime >= showTensionTime)
             {
                 theFishStatus.text = "== 緊 ==";
                 theFishStatus.color = Color.red;
                 Debug.Log("== 緊 ==");
-                showFishEscapeTime = Random.Range(earlyTime, laterTime);
                 fishReadyEscapeTime += Time.deltaTime;
                 if (fishReadyEscapeTime >= showFishEscapeTime)
                 {
                     theFish.SetActive(false);
                     throwString.SetActive(true);
                     this.gameObject.SetActive(false);
+                    withdrawButton.SetActive(false);
                     //theDistance.text = "";
                     theFishStatus.text = "逃跑了...";
                     theFishStatus.color = Color.black;
@@ -70,8 +69,8 @@ public class TensionTheString : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     }
 
     public void TensionButton()
-    { 
-        
+    {
+        showFishEscapeTime = Random.Range(earlyTime, laterTime);
     }
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -80,11 +79,13 @@ public class TensionTheString : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         theFishStatus.text = "== 緊 ==";
         theFishStatus.color = Color.red;
         theFish.GetComponent<Text>().text = "?";
+        showLooseTime = Random.Range(earlyTime, laterTime);
 
     }
     public void OnPointerUp(PointerEventData EventData)
     {
         isturnbackTension = true;
         isTension = false;
+        showTensionTime = Random.Range(earlyTime, laterTime);
     }
 }

@@ -354,6 +354,7 @@ MonoBehaviour:
   fishingP2: 60
   fishingP3: 45
   fishingP4: 25
+  fishingProbability: 0
   goodPolefishingP1up: 12
   goodPolefishingP2up: 9
   goodPolefishingP3up: 6
@@ -626,7 +627,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '?'
+  m_Text: "\u597D\u91E3\u7AFF"
 --- !u!222 &134550009
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -705,7 +706,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '?'
+  m_Text: "\u9AD8\u7D1A\u9B5A\u9264"
 --- !u!222 &141738409
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -801,7 +802,7 @@ MonoBehaviour:
       - m_Target: {fileID: 169733233}
         m_TargetAssemblyTypeName: FishingEquipmentSelect, Assembly-CSharp
         m_MethodName: selectTheEquipment
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1394,7 +1395,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '?'
+  m_Text: "\u9B5A\u990C5\u865F"
 --- !u!222 &249875026
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1765,6 +1766,7 @@ GameObject:
   - component: {fileID: 367539023}
   - component: {fileID: 367539025}
   - component: {fileID: 367539024}
+  - component: {fileID: 367539026}
   m_Layer: 5
   m_Name: StringInfoNow
   m_TagString: Untagged
@@ -1833,6 +1835,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 367539022}
   m_CullTransparentMesh: 1
+--- !u!114 &367539026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367539022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8936f5086364f334aa0c4a748e03a0b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishingEquipmentName:
+  - "\u666E\u901A\u91E3\u7DDA"
+  - "\u597D\u91E3\u7DDA"
+  - "\u9AD8\u7D1A\u91E3\u7DDA"
 --- !u!1 &432028185
 GameObject:
   m_ObjectHideFlags: 0
@@ -2082,7 +2100,7 @@ MonoBehaviour:
       - m_Target: {fileID: 457807230}
         m_TargetAssemblyTypeName: FishingEquipmentSelect, Assembly-CSharp
         m_MethodName: selectTheEquipment
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2219,7 +2237,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '?'
+  m_Text: "\u597D\u9B5A\u9264"
 --- !u!222 &509385658
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2731,7 +2749,7 @@ MonoBehaviour:
       - m_Target: {fileID: 675318287}
         m_TargetAssemblyTypeName: FishingEquipmentSelect, Assembly-CSharp
         m_MethodName: selectTheEquipment
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2883,7 +2901,7 @@ MonoBehaviour:
       - m_Target: {fileID: 680761294}
         m_TargetAssemblyTypeName: FishingEquipmentSelect, Assembly-CSharp
         m_MethodName: selectTheEquipment
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3116,7 +3134,7 @@ MonoBehaviour:
       - m_Target: {fileID: 764462144}
         m_TargetAssemblyTypeName: FishingEquipmentSelect, Assembly-CSharp
         m_MethodName: selectTheEquipment
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5152,7 +5170,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '?'
+  m_Text: "\u9AD8\u7D1A\u91E3\u7AFF"
 --- !u!222 &1156253457
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5248,7 +5266,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1158726140}
         m_TargetAssemblyTypeName: FishingEquipmentSelect, Assembly-CSharp
         m_MethodName: selectTheEquipment
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5422,7 +5440,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '?'
+  m_Text: "\u9AD8\u7D1A\u91E3\u7DDA"
 --- !u!222 &1185545456
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6053,6 +6071,7 @@ GameObject:
   - component: {fileID: 1311141828}
   - component: {fileID: 1311141830}
   - component: {fileID: 1311141829}
+  - component: {fileID: 1311141831}
   m_Layer: 5
   m_Name: BaitInfoNow
   m_TagString: Untagged
@@ -6112,7 +6131,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u9B5A\u990C\n1\u865F"
+  m_Text: "\u9B5A\u990C1\u865F"
 --- !u!222 &1311141830
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6121,6 +6140,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1311141827}
   m_CullTransparentMesh: 1
+--- !u!114 &1311141831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311141827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8936f5086364f334aa0c4a748e03a0b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishingEquipmentName:
+  - "\u9B5A\u990C1\u865F"
+  - "\u9B5A\u990C2\u865F"
+  - "\u9B5A\u990C3\u865F"
+  - "\u9B5A\u990C4\u865F"
+  - "\u9B5A\u990C5\u865F"
 --- !u!1 &1312875751
 GameObject:
   m_ObjectHideFlags: 0
@@ -6287,7 +6324,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1315799754}
         m_TargetAssemblyTypeName: FishingEquipmentSelect, Assembly-CSharp
         m_MethodName: selectTheEquipment
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6872,6 +6909,7 @@ GameObject:
   - component: {fileID: 1486960390}
   - component: {fileID: 1486960392}
   - component: {fileID: 1486960391}
+  - component: {fileID: 1486960393}
   m_Layer: 5
   m_Name: HookInfoNow
   m_TagString: Untagged
@@ -6940,6 +6978,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1486960389}
   m_CullTransparentMesh: 1
+--- !u!114 &1486960393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486960389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8936f5086364f334aa0c4a748e03a0b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishingEquipmentName:
+  - "\u666E\u901A\u9B5A\u9264"
+  - "\u597D\u9B5A\u9264"
+  - "\u9AD8\u7D1A\u9B5A\u9264"
 --- !u!1 &1489940012
 GameObject:
   m_ObjectHideFlags: 0
@@ -7106,7 +7160,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1502031901}
         m_TargetAssemblyTypeName: FishingEquipmentSelect, Assembly-CSharp
         m_MethodName: selectTheEquipment
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7260,7 +7314,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1515464557}
         m_TargetAssemblyTypeName: FishingEquipmentSelect, Assembly-CSharp
         m_MethodName: selectTheEquipment
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7907,7 +7961,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1596838503}
         m_TargetAssemblyTypeName: FishingEquipmentSelect, Assembly-CSharp
         m_MethodName: selectTheEquipment
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8138,7 +8192,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1617588708}
         m_TargetAssemblyTypeName: FishingEquipmentSelect, Assembly-CSharp
         m_MethodName: selectTheEquipment
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8292,7 +8346,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1672300954}
         m_TargetAssemblyTypeName: FishingEquipmentSelect, Assembly-CSharp
         m_MethodName: selectTheEquipment
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8644,7 +8698,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1699254038}
         m_TargetAssemblyTypeName: FishingEquipmentSelect, Assembly-CSharp
         m_MethodName: selectTheEquipment
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9016,7 +9070,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '?'
+  m_Text: "\u9B5A\u990C4\u865F"
 --- !u!222 &1784502808
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9266,7 +9320,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '?'
+  m_Text: "\u597D\u91E3\u7DDA"
 --- !u!222 &1858909962
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9365,6 +9419,7 @@ GameObject:
   - component: {fileID: 1914578515}
   - component: {fileID: 1914578517}
   - component: {fileID: 1914578516}
+  - component: {fileID: 1914578518}
   m_Layer: 5
   m_Name: PoleInfoNow
   m_TagString: Untagged
@@ -9433,6 +9488,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914578514}
   m_CullTransparentMesh: 1
+--- !u!114 &1914578518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914578514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8936f5086364f334aa0c4a748e03a0b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishingEquipmentName:
+  - "\u666E\u901A\u91E3\u7AFF"
+  - "\u597D\u91E3\u7AFF"
+  - "\u9AD8\u7D1A\u91E3\u7AFF"
 --- !u!1 &1924946830
 GameObject:
   m_ObjectHideFlags: 0
@@ -9678,7 +9749,7 @@ MonoBehaviour:
       - m_Target: {fileID: 2061532031}
         m_TargetAssemblyTypeName: FishingEquipmentSelect, Assembly-CSharp
         m_MethodName: selectTheEquipment
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

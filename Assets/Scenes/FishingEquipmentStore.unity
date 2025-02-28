@@ -1215,8 +1215,8 @@ MonoBehaviour:
   - {fileID: 147444814}
   - {fileID: 987517893}
   - {fileID: 1460724818}
-  Money: {fileID: 133195211}
-  MoneyStatus: {fileID: 1963596974}
+  money: {fileID: 133195211}
+  moneyStatus: {fileID: 1963596974}
 --- !u!1 &809623057
 GameObject:
   m_ObjectHideFlags: 0

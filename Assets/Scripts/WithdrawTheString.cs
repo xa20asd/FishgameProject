@@ -15,7 +15,7 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
 
     public float withdrawSpeed, withdrawdistance;
     float stringTensionTime;
-    int fishingProbability;
+    
     public bool isWithdrawing;
 
     [SerializeField, Header("釣魚裝備")]
@@ -42,6 +42,7 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
     public int fishingP4;
     int fishNum1, fishNum2, fishNum3, fishPriceNum1, fishPriceNum2, fishPriceNum3;
     [Header("釣竿參數調整")]
+    public int fishingProbability;
     public int goodPolefishingP1up;
     public int goodPolefishingP2up;
     public int goodPolefishingP3up;
@@ -262,6 +263,8 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
                 withdrawdistance = 0;
                 isWithdrawing = false;
                 theFishStatus.text = "成功釣到 !!!";
+                theFishStatus.color = Color.black;
+                theFishStatus.fontStyle = FontStyle.Bold;
                 get.SetActive(true);
                 throwString.SetActive(false);
                 tensionButton.SetActive(false);
@@ -343,8 +346,8 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
                 else if (PlayerPrefs.GetString("fisharea") == "溪邊 2 區")
                 {
                     fishNum1 = 0;
-                    fishNum2 = 0;
-                    fishPriceNum1 = 1;
+                    fishNum2 = 1;
+                    fishPriceNum1 = 0;
                     fishPriceNum2 = 1;
                     if (fishingProbability >= fishingP1 && float.Parse(throwDistance.text) >= 4.0f)
                     {
@@ -375,8 +378,8 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
                 else if (PlayerPrefs.GetString("fisharea") == "溪邊 3 區")
                 {
                     fishNum1 = 0;
-                    fishNum2 = 0;
-                    fishPriceNum1 = 2;
+                    fishNum2 = 2;
+                    fishPriceNum1 = 0;
                     fishPriceNum2 = 2;
                     if (fishingProbability >= fishingP1 && float.Parse(throwDistance.text) >= 4.0f)
                     {
@@ -407,8 +410,8 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
                 else if (PlayerPrefs.GetString("fisharea") == "湖邊 1 區")
                 {
                     fishNum1 = 1;
-                    fishNum2 = 1;
-                    fishPriceNum1 = 0;
+                    fishNum2 = 0;
+                    fishPriceNum1 = 1;
                     fishPriceNum2 = 0;
                     if (fishingProbability >= fishingP1 && float.Parse(throwDistance.text) >= 4.0f)
                     {
@@ -471,8 +474,8 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
                 else if (PlayerPrefs.GetString("fisharea") == "湖邊 3 區")
                 {
                     fishNum1 = 1;
-                    fishNum2 = 1;
-                    fishPriceNum1 = 2;
+                    fishNum2 = 2;
+                    fishPriceNum1 = 1;
                     fishPriceNum2 = 2;
                     if (fishingProbability >= fishingP1 && float.Parse(throwDistance.text) >= 4.0f)
                     {
@@ -503,8 +506,8 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
                 else if (PlayerPrefs.GetString("fisharea") == "海邊 1 區")
                 {
                     fishNum1 = 2;
-                    fishNum2 = 2;
-                    fishPriceNum1 = 0;
+                    fishNum2 = 0;
+                    fishPriceNum1 = 2;
                     fishPriceNum2 = 0;
                     if (fishingProbability >= fishingP1 && float.Parse(throwDistance.text) >= 4.0f)
                     {
@@ -535,8 +538,8 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
                 else if (PlayerPrefs.GetString("fisharea") == "海邊 2 區")
                 {
                     fishNum1 = 2;
-                    fishNum2 = 2;
-                    fishPriceNum1 = 1;
+                    fishNum2 = 1;
+                    fishPriceNum1 = 2;
                     fishPriceNum2 = 1;
                     if (fishingProbability >= fishingP1 && float.Parse(throwDistance.text) >= 4.0f)
                     {

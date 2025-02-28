@@ -43,8 +43,7 @@ public class KeyupThrow : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     public void Throwclick(GameObject throwbutton)
     {
-        //throwbutton.interactable = false;
-        //throwbutton.onClick.RemoveAllListeners();
+        theFishStatus.GetComponent<Text>().fontStyle = FontStyle.Normal;
         throwbutton.SetActive(false);
         TheFishInfo isReStarFishComeTime = FindAnyObjectByType<TheFishInfo>();
         isReStarFishComeTime.reStartFishComingTime();

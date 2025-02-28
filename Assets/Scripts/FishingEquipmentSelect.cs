@@ -18,6 +18,9 @@ public class FishingEquipmentSelect : MonoBehaviour
     [SerializeField, Header("其他按鈕")]
     public Button[] equipments;
 
+    //[SerializeField, Header("儲存參數")]
+    //public string saveChangeKey;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -67,6 +70,15 @@ public class FishingEquipmentSelect : MonoBehaviour
             }
         }
 
+        if (equipmentName.text == buyEquipmentName || equipmentName.text == this.transform.GetChild(0).GetComponent<Text>().text)
+        {
+            this.GetComponent<Image>().color = Color.white;
+            //equipmentName.text = textBuyEquipmentName.text;
+        }
+        else
+        {
+            this.GetComponent<Image>().color = new Color(170.0f / 255.0f, 170.0f / 255.0f, 170.0f / 255.0f);
+        }
     }
 
     // Update is called once per frame
@@ -74,19 +86,19 @@ public class FishingEquipmentSelect : MonoBehaviour
     {
         
     }
-    /// <summary>
-    /// 選擇該裝備時按鈕的變化
-    /// </summary>
-    /// <param name="equipmentname"></param>
-    public void selectTheEquipment(string equipmentname)
+
+
+    public void selectTheEquipment()
     {
         if (this.transform.GetChild(0).GetComponent<Text>().text != "?")
         { 
-            equipmentName.text = equipmentname;
+            equipmentName.text = textBuyEquipmentName.text;
             this.GetComponent<Image>().color = Color.white;
+            PlayerPrefs.SetString(textBuyEquipmentName.text, textBuyEquipmentName.text);
             for (int i = 0; i < equipments.Length; i++)
             {
                 equipments[i].GetComponent<Image>().color = new Color(170.0f / 255.0f, 170.0f / 255.0f, 170.0f / 255.0f);
+                PlayerPrefs.DeleteKey(equipments[i].transform.GetChild(0).GetComponent<Text>().text);
             }
         }
     }
