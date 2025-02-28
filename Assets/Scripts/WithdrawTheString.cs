@@ -317,22 +317,22 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
                     fishNum2 = 0;
                     fishPriceNum1 = 0;
                     fishPriceNum2 = 0;
-                    if (fishingProbability >= fishingP1 && float.Parse(throwDistance.text) >= 4.0f )
+                    if (fishingProbability >= fishingP1 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 4.0f && PlayerPrefs.GetFloat("finalThrowDistance") <= 10.0f)
                     {
                         fishNum3 = 0;
                         fishPriceNum3 = 0;
                     }
-                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && float.Parse(throwDistance.text) >= 2.5f && float.Parse(throwDistance.text) <= 9.5f)
+                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 2.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 9.5f)
                     {
                         fishNum3 = 1;
                         fishPriceNum3 = 1;
                     }
-                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && float.Parse(throwDistance.text) >= 1.8f && float.Parse(throwDistance.text) <= 8.0f)
+                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.8f && PlayerPrefs.GetFloat("finalThrowDistance") <= 8.0f)
                     {
                         fishNum3 = 2;
                         fishPriceNum3 = 2;
                     }
-                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && float.Parse(throwDistance.text) >= 1.5f && float.Parse(throwDistance.text) <= 6.5f)
+                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 6.5f)
                     {
                         fishNum3 = 3;
                         fishPriceNum3 = 3;
@@ -349,22 +349,22 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
                     fishNum2 = 1;
                     fishPriceNum1 = 0;
                     fishPriceNum2 = 1;
-                    if (fishingProbability >= fishingP1 && float.Parse(throwDistance.text) >= 4.0f)
+                    if (fishingProbability >= fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 4.0f && PlayerPrefs.GetFloat("finalThrowDistance") <= 10.0f)
                     {
                         fishNum3 = 0;
                         fishPriceNum3 = 0;
                     }
-                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && float.Parse(throwDistance.text) >= 2.5f && float.Parse(throwDistance.text) <= 9.5f)
+                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 2.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 9.5f)
                     {
                         fishNum3 = 1;
                         fishPriceNum3 = 1;
                     }
-                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && float.Parse(throwDistance.text) >= 1.8f && float.Parse(throwDistance.text) <= 8.0f)
+                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.8f && PlayerPrefs.GetFloat("finalThrowDistance") <= 8.0f)
                     {
                         fishNum3 = 2;
                         fishPriceNum3 = 2;
                     }
-                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && float.Parse(throwDistance.text) >= 1.5f && float.Parse(throwDistance.text) <= 6.5f)
+                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 6.5f)
                     {
                         fishNum3 = 3;
                         fishPriceNum3 = 3;
@@ -381,22 +381,22 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
                     fishNum2 = 2;
                     fishPriceNum1 = 0;
                     fishPriceNum2 = 2;
-                    if (fishingProbability >= fishingP1 && float.Parse(throwDistance.text) >= 4.0f)
+                    if (fishingProbability >= fishingP1 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 4.0f && PlayerPrefs.GetFloat("finalThrowDistance") <= 10.0f)
                     {
                         fishNum3 = 0;
                         fishPriceNum3 = 0;
                     }
-                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && float.Parse(throwDistance.text) >= 2.5f && float.Parse(throwDistance.text) <= 9.5f)
+                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 2.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 9.5f)
                     {
                         fishNum3 = 1;
                         fishPriceNum3 = 1;
                     }
-                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && float.Parse(throwDistance.text) >= 1.8f && float.Parse(throwDistance.text) <= 8.0f)
+                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.8f && PlayerPrefs.GetFloat("finalThrowDistance") <= 8.0f)
                     {
                         fishNum3 = 2;
                         fishPriceNum3 = 2;
                     }
-                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && float.Parse(throwDistance.text) >= 1.5f && float.Parse(throwDistance.text) <= 6.5f)
+                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 6.5f)
                     {
                         fishNum3 = 3;
                         fishPriceNum3 = 3;
@@ -413,22 +413,22 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
                     fishNum2 = 0;
                     fishPriceNum1 = 1;
                     fishPriceNum2 = 0;
-                    if (fishingProbability >= fishingP1 && float.Parse(throwDistance.text) >= 4.0f)
+                    if (fishingProbability >= fishingP1 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 4.0f && PlayerPrefs.GetFloat("finalThrowDistance") <= 10.0f)
                     {
                         fishNum3 = 0;
                         fishPriceNum3 = 0;
                     }
-                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && float.Parse(throwDistance.text) >= 2.5f && float.Parse(throwDistance.text) <= 9.5f)
+                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 2.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 9.5f)
                     {
                         fishNum3 = 1;
                         fishPriceNum3 = 1;
                     }
-                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && float.Parse(throwDistance.text) >= 1.8f && float.Parse(throwDistance.text) <= 8.0f)
+                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.8f && PlayerPrefs.GetFloat("finalThrowDistance") <= 8.0f)
                     {
                         fishNum3 = 2;
                         fishPriceNum3 = 2;
                     }
-                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && float.Parse(throwDistance.text) >= 1.5f && float.Parse(throwDistance.text) <= 6.5f)
+                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 6.5f)
                     {
                         fishNum3 = 3;
                         fishPriceNum3 = 3;
@@ -445,22 +445,22 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
                     fishNum2 = 1;
                     fishPriceNum1 = 1;
                     fishPriceNum2 = 1;
-                    if (fishingProbability >= fishingP1 && float.Parse(throwDistance.text) >= 4.0f)
+                    if (fishingProbability >= fishingP1 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 4.0f && PlayerPrefs.GetFloat("finalThrowDistance") <= 10.0f)
                     {
                         fishNum3 = 0;
                         fishPriceNum3 = 0;
                     }
-                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && float.Parse(throwDistance.text) >= 2.5f && float.Parse(throwDistance.text) <= 9.5f)
+                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 2.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 9.5f)
                     {
                         fishNum3 = 1;
                         fishPriceNum3 = 1;
                     }
-                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && float.Parse(throwDistance.text) >= 1.8f && float.Parse(throwDistance.text) <= 8.0f)
+                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.8f && PlayerPrefs.GetFloat("finalThrowDistance") <= 8.0f)
                     {
                         fishNum3 = 2;
                         fishPriceNum3 = 2;
                     }
-                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && float.Parse(throwDistance.text) >= 1.5f && float.Parse(throwDistance.text) <= 6.5f)
+                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 6.5f)
                     {
                         fishNum3 = 3;
                         fishPriceNum3 = 3;
@@ -477,22 +477,22 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
                     fishNum2 = 2;
                     fishPriceNum1 = 1;
                     fishPriceNum2 = 2;
-                    if (fishingProbability >= fishingP1 && float.Parse(throwDistance.text) >= 4.0f)
+                    if (fishingProbability >= fishingP1 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 4.0f && PlayerPrefs.GetFloat("finalThrowDistance") <= 10.0f)
                     {
                         fishNum3 = 0;
                         fishPriceNum3 = 0;
                     }
-                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && float.Parse(throwDistance.text) >= 2.5f && float.Parse(throwDistance.text) <= 9.5f)
+                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 2.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 9.5f)
                     {
                         fishNum3 = 1;
                         fishPriceNum3 = 1;
                     }
-                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && float.Parse(throwDistance.text) >= 1.8f && float.Parse(throwDistance.text) <= 8.0f)
+                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.8f && PlayerPrefs.GetFloat("finalThrowDistance") <= 8.0f)
                     {
                         fishNum3 = 2;
                         fishPriceNum3 = 2;
                     }
-                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && float.Parse(throwDistance.text) >= 1.5f && float.Parse(throwDistance.text) <= 6.5f)
+                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 6.5f)
                     {
                         fishNum3 = 3;
                         fishPriceNum3 = 3;
@@ -509,22 +509,22 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
                     fishNum2 = 0;
                     fishPriceNum1 = 2;
                     fishPriceNum2 = 0;
-                    if (fishingProbability >= fishingP1 && float.Parse(throwDistance.text) >= 4.0f)
+                    if (fishingProbability >= fishingP1 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 4.0f && PlayerPrefs.GetFloat("finalThrowDistance") <= 10.0f)
                     {
                         fishNum3 = 0;
                         fishPriceNum3 = 0;
                     }
-                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && float.Parse(throwDistance.text) >= 2.5f && float.Parse(throwDistance.text) <= 9.5f)
+                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 2.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 9.5f)
                     {
                         fishNum3 = 1;
                         fishPriceNum3 = 1;
                     }
-                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && float.Parse(throwDistance.text) >= 1.8f && float.Parse(throwDistance.text) <= 8.0f)
+                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.8f && PlayerPrefs.GetFloat("finalThrowDistance") <= 8.0f)
                     {
                         fishNum3 = 2;
                         fishPriceNum3 = 2;
                     }
-                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && float.Parse(throwDistance.text) >= 1.5f && float.Parse(throwDistance.text) <= 6.5f)
+                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 6.5f)
                     {
                         fishNum3 = 3;
                         fishPriceNum3 = 3;
@@ -541,22 +541,22 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
                     fishNum2 = 1;
                     fishPriceNum1 = 2;
                     fishPriceNum2 = 1;
-                    if (fishingProbability >= fishingP1 && float.Parse(throwDistance.text) >= 4.0f)
+                    if (fishingProbability >= fishingP1 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 4.0f && PlayerPrefs.GetFloat("finalThrowDistance") <= 10.0f)
                     {
                         fishNum3 = 0;
                         fishPriceNum3 = 0;
                     }
-                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && float.Parse(throwDistance.text) >= 2.5f && float.Parse(throwDistance.text) <= 9.5f)
+                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 2.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 9.5f)
                     {
                         fishNum3 = 1;
                         fishPriceNum3 = 1;
                     }
-                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && float.Parse(throwDistance.text) >= 1.8f && float.Parse(throwDistance.text) <= 8.0f)
+                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.8f && PlayerPrefs.GetFloat("finalThrowDistance") <= 8.0f)
                     {
                         fishNum3 = 2;
                         fishPriceNum3 = 2;
                     }
-                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && float.Parse(throwDistance.text) >= 1.5f && float.Parse(throwDistance.text) <= 6.5f)
+                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 6.5f)
                     {
                         fishNum3 = 3;
                         fishPriceNum3 = 3;
@@ -573,22 +573,22 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
                     fishNum2 = 2;
                     fishPriceNum1 = 2;
                     fishPriceNum2 = 2;
-                    if (fishingProbability >= fishingP1 && float.Parse(throwDistance.text) >= 4.0f)
+                    if (fishingProbability >= fishingP1 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 4.0f && PlayerPrefs.GetFloat("finalThrowDistance") <= 10.0f)
                     {
                         fishNum3 = 0;
                         fishPriceNum3 = 0;
                     }
-                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && float.Parse(throwDistance.text) >= 2.5f && float.Parse(throwDistance.text) <= 9.5f)
+                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 2.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 9.5f)
                     {
                         fishNum3 = 1;
                         fishPriceNum3 = 1;
                     }
-                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && float.Parse(throwDistance.text) >= 1.8f && float.Parse(throwDistance.text) <= 8.0f)
+                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.8f && PlayerPrefs.GetFloat("finalThrowDistance") <= 8.0f)
                     {
                         fishNum3 = 2;
                         fishPriceNum3 = 2;
                     }
-                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && float.Parse(throwDistance.text) >= 1.5f && float.Parse(throwDistance.text) <= 6.5f)
+                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 6.5f)
                     {
                         fishNum3 = 3;
                         fishPriceNum3 = 3;

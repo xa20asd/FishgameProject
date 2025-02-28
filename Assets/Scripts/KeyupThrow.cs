@@ -9,6 +9,7 @@ public class KeyupThrow : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public bool isButtonPressed;
     float throwTime = 1.0f;
     public Text throwDistance;
+    float finalThrowDistance;
 
     [SerializeField, Header ("魚類info")]
     public GameObject theFishStatus;
@@ -47,6 +48,8 @@ public class KeyupThrow : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         throwbutton.SetActive(false);
         TheFishInfo isReStarFishComeTime = FindAnyObjectByType<TheFishInfo>();
         isReStarFishComeTime.reStartFishComingTime();
+        finalThrowDistance = float.Parse(throwDistance.text);
+        PlayerPrefs.SetFloat("finalThrowDistance", finalThrowDistance);
         foreach (Button button in notFishCmdButton)
         {
             button.interactable = false;
@@ -60,7 +63,8 @@ public class KeyupThrow : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         theFish.SetActive(false);
         theFish.GetComponent<Text>().text = "";
         Debug.Log("已甩出釣線");
-        throwTime = 1.0f;  
+        throwTime = 1.0f;
+        finalThrowDistance = 0;
     }
 
     public void OnPointerUp(PointerEventData eventData)
