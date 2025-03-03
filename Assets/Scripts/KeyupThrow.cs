@@ -10,6 +10,8 @@ public class KeyupThrow : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     float throwTime = 1.0f;
     public Text throwDistance;
     float finalThrowDistance;
+    public AudioSource throwSound;
+    bool canPlayThrowSound = true;
 
     [SerializeField, Header ("魚類info")]
     public GameObject theFishStatus;
@@ -65,6 +67,12 @@ public class KeyupThrow : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         Debug.Log("已甩出釣線");
         throwTime = 1.0f;
         finalThrowDistance = 0;
+        if (canPlayThrowSound == true)
+        {
+            throwSound.Play();
+            canPlayThrowSound = false;
+        }
+        
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -74,5 +82,6 @@ public class KeyupThrow : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         theFishStatus.SetActive(true);
         theFishStatus.GetComponent<Text>().text = "等待中...";
         theFish.SetActive(true);
+        canPlayThrowSound = true;
     }
 }

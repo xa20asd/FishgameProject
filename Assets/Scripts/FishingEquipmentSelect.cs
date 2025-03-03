@@ -61,13 +61,18 @@ public class FishingEquipmentSelect : MonoBehaviour
         //} 
         #endregion
 
-        int count = PlayerPrefs.GetInt("equipmentListCount", 0);
-        for (int i = 0; i < count; i++)
+        //int count = PlayerPrefs.GetInt("equipmentListCount", 0);
+        //for (int i = 0; i < count; i++)
+        //{
+        //    if (PlayerPrefs.GetString("buyList" + i) == buyEquipmentName)
+        //    {
+        //        textBuyEquipmentName.text = PlayerPrefs.GetString("buyList" + i);
+        //    }
+        //}
+
+        if (PlayerPrefs.GetString("已購買" + buyEquipmentName) == buyEquipmentName)
         {
-            if (PlayerPrefs.GetString("buyList" + i) == buyEquipmentName)
-            {
-                textBuyEquipmentName.text = PlayerPrefs.GetString("buyList" + i);
-            }
+            textBuyEquipmentName.text = PlayerPrefs.GetString("已購買" + buyEquipmentName);
         }
 
         if (equipmentName.text == buyEquipmentName || equipmentName.text == this.transform.GetChild(0).GetComponent<Text>().text)

@@ -10,7 +10,7 @@ public class WantBuyEquipment : MonoBehaviour
     public string equipmentName;
     public int sellprice;
 
-    [SerializeField, Header("其他按鈕")]
+    [SerializeField, Header("選擇項目按鈕")]
     public Button[] buyEquipmentButton;
 
 
@@ -34,17 +34,26 @@ public class WantBuyEquipment : MonoBehaviour
         #endregion
 
         
-        int count = PlayerPrefs.GetInt("equipmentListCount", 0);
-        for (int i = 0; i < count; i++)
+        //int count = PlayerPrefs.GetInt("equipmentListCount", 0);
+        //for (int i = 0; i < count; i++)
+        //{
+        //    if (PlayerPrefs.GetString("buyList" + i) == equipmentName)
+        //    {
+        //        this.gameObject.tag = PlayerPrefs.GetString("buytag", "");
+        //        float colorRed = PlayerPrefs.GetFloat("buyColorR", 255);
+        //        float colorGreen = PlayerPrefs.GetFloat("buyColorG", 255);
+        //        float colorBlue = PlayerPrefs.GetFloat("buyColorB", 255);
+        //        this.GetComponent<Image>().color = new Color(colorRed, colorGreen, colorBlue);
+        //    }
+        //}
+
+        if (PlayerPrefs.GetString("已購買" + equipmentName) == equipmentName)
         {
-            if (PlayerPrefs.GetString("buyList" + i) == equipmentName)
-            {
-                this.gameObject.tag = PlayerPrefs.GetString("buytag", "");
-                float colorRed = PlayerPrefs.GetFloat("buyColorR", 255);
-                float colorGreen = PlayerPrefs.GetFloat("buyColorG", 255);
-                float colorBlue = PlayerPrefs.GetFloat("buyColorB", 255);
-                this.GetComponent<Image>().color = new Color(colorRed, colorGreen, colorBlue);
-            }
+            this.gameObject.tag = PlayerPrefs.GetString("buytag", "");
+            float colorRed = PlayerPrefs.GetFloat("buyColorR", 255);
+            float colorGreen = PlayerPrefs.GetFloat("buyColorG", 255);
+            float colorBlue = PlayerPrefs.GetFloat("buyColorB", 255);
+            this.GetComponent<Image>().color = new Color(colorRed, colorGreen, colorBlue);
         }
     }
 

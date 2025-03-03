@@ -14,7 +14,7 @@ using System.IO;
 public class ConfirmBuyEquipment : MonoBehaviour
 {
     //public AddSaveList addSaveList;
-    List<string> equipmentList = new List<string>();
+    //List<string> equipmentList = new List<string>();
     public GameObject[] sellEquipments;
 
     [SerializeField, Header("購買文字提示")]
@@ -46,12 +46,15 @@ public class ConfirmBuyEquipment : MonoBehaviour
                 { 
                     int newMoney = textMoney - thesellprice;
                     money.text = newMoney.ToString();
+                    PlayerPrefs.SetInt("RealMoney", int.Parse(money.text));
                     moneyStatus.gameObject.SetActive(true);
                     moneyStatus.text = "成功購買";
                     sellEquipments[i].gameObject.tag = "buy";
+                    PlayerPrefs.SetString("buytag", "buy");
                     sellEquipments[i].GetComponent<Image>().color = new Color(190.0f / 255.0f, 255.0f / 255.0f, 230.0f / 255.0f);
-                    equipmentList.Add(thebuyequipment);
-                    Debug.Log("已購買裝備數量" + equipmentList.Count);
+                    //equipmentList.Add(thebuyequipment);
+                    //Debug.Log("已購買裝備數量" + equipmentList.Count);
+                    PlayerPrefs.SetString("已購買" + sellEquipments[i].transform.GetChild(0).gameObject.name, sellEquipments[i].transform.GetChild(0).gameObject.name);
                     SaveBuyEquipmentList();
                     #region 使用json儲存資料的方法
                     //string jsonList = JsonUtility.ToJson(new EquipmentList(equipmentList));
@@ -72,24 +75,17 @@ public class ConfirmBuyEquipment : MonoBehaviour
     }
     void SaveBuyEquipmentList()
     {
-        for (int i = 0; i < equipmentList.Count; i++)
-        {
-            PlayerPrefs.SetString("buyList" + i, equipmentList[i]);
-        }
-        PlayerPrefs.SetInt("equipmentListCount", equipmentList.Count);
+        //for (int i = 0; i < equipmentList.Count; i++)
+        //{
+        //    PlayerPrefs.SetString("buyList" + i, equipmentList[i]);
+            
+        //}
+        //PlayerPrefs.SetInt("equipmentListCount", equipmentList.Count);
         PlayerPrefs.SetFloat("buyColorR", 190.0f / 255.0f);
         PlayerPrefs.SetFloat("buyColorG", 255.0f / 255.0f);
         PlayerPrefs.SetFloat("buyColorB", 230.0f / 255.0f);
-        PlayerPrefs.Save();
     }
-    void LoadBuyEquipmentList()
-    {
-        int count = PlayerPrefs.GetInt("equipmentListCount", 0);
-        for (int i = 0; i < count; i++) 
-        {
-            equipmentList.Add(PlayerPrefs.GetString("buyList" + i));
-        }
-    }
+    
 }
 
 

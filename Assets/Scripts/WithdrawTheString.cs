@@ -15,6 +15,8 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
 
     public float withdrawSpeed, withdrawdistance;
     float stringTensionTime;
+    public AudioSource theFishingReelSound;
+    bool canWithdrawReel = true;
     
     public bool isWithdrawing;
 
@@ -627,10 +629,17 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
     {
         isWithdrawing = true;
         withdrawdistance = float.Parse(throwDistance.text);
+        if (canWithdrawReel == true)
+        {
+            theFishingReelSound.Play();
+            canWithdrawReel = false;
+        }
     }
     public void OnPointerUp(PointerEventData EventData)
     {
         isWithdrawing = false;
+        canWithdrawReel = true;
+        theFishingReelSound.Stop();
     }
 
     void AdjustWithdrawSpeed(string equipmentname)
