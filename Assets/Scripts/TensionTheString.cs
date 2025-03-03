@@ -18,6 +18,9 @@ public class TensionTheString : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     public GameObject throwString;
     public GameObject withdrawButton;
 
+    [SerializeField, Header("UI按鈕")]
+    public Button[] notFishCmdButton;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -71,6 +74,10 @@ public class TensionTheString : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     public void TensionButton()
     {
         showFishEscapeTime = Random.Range(earlyTime, laterTime);
+        foreach (Button button in notFishCmdButton)
+        {
+            button.interactable = false;
+        }
     }
     public void OnPointerDown(PointerEventData eventData)
     {

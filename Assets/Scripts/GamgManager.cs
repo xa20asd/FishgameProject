@@ -10,6 +10,9 @@ public class GamgManager : MonoBehaviour
         { 
             PlayerPrefs.DeleteAll();
         }
+
+        Screen.fullScreen = false;
+        Screen.SetResolution(1600, 900, false);
     }
 
     // Update is called once per frame
