@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TensionTheString : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     public float continueTime, showLooseTime, showTensionTime, showFishEscapeTime, fishReadyEscapeTime;
-    bool isTension, isturnbackTension, isFishReadyEscape;
+    bool isTension, isturnbackTension;
     public Text theFishStatus;
     public GameObject theFish;
     
@@ -30,6 +30,7 @@ public class TensionTheString : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     // Update is called once per frame
     void Update()
     {
+        //魚上鉤後開始拉緊穩定
         if (isTension)
         {
             continueTime += Time.deltaTime;
@@ -43,6 +44,8 @@ public class TensionTheString : MonoBehaviour, IPointerDownHandler, IPointerUpHa
                 isTension = false;
             }
         }
+
+        //當釣魚開始變回緊時
         if (isturnbackTension) 
         {
             continueTime += Time.deltaTime;
@@ -52,6 +55,8 @@ public class TensionTheString : MonoBehaviour, IPointerDownHandler, IPointerUpHa
                 theFishStatus.color = Color.red;
                 Debug.Log("== 緊 ==");
                 fishReadyEscapeTime += Time.deltaTime;
+
+                //當釣線變緊之後不拉緊，則魚逃跑
                 if (fishReadyEscapeTime >= showFishEscapeTime)
                 {
                     theFish.SetActive(false);
@@ -87,6 +92,7 @@ public class TensionTheString : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         theFishStatus.color = Color.red;
         theFish.GetComponent<Text>().text = "?";
         showLooseTime = Random.Range(earlyTime, laterTime);
+        continueTime = 0;
 
     }
     public void OnPointerUp(PointerEventData EventData)
@@ -94,5 +100,6 @@ public class TensionTheString : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         isturnbackTension = true;
         isTension = false;
         showTensionTime = Random.Range(earlyTime, laterTime);
+        continueTime = 0;
     }
 }

@@ -33,7 +33,7 @@ public class WantBuyEquipment : MonoBehaviour
         //} 
         #endregion
 
-        
+        #region 使用列表方式接受購買裝備的資料
         //int count = PlayerPrefs.GetInt("equipmentListCount", 0);
         //for (int i = 0; i < count; i++)
         //{
@@ -45,7 +45,8 @@ public class WantBuyEquipment : MonoBehaviour
         //        float colorBlue = PlayerPrefs.GetFloat("buyColorB", 255);
         //        this.GetComponent<Image>().color = new Color(colorRed, colorGreen, colorBlue);
         //    }
-        //}
+        //} 
+        #endregion
 
         if (PlayerPrefs.GetString("已購買" + equipmentName) == equipmentName)
         {
@@ -60,14 +61,7 @@ public class WantBuyEquipment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (equipmentName == "buy")
-        //{
-        //    float colorRed = PlayerPrefs.GetFloat("buyColorR", 255);
-        //    float colorGreen = PlayerPrefs.GetFloat("buyColorG", 255);
-        //    float colorBlue = PlayerPrefs.GetFloat("buyColorB", 255);
-
-        //    this.GetComponent<Image>().color = new Color(190.0f / 255.0f, 255.0f / 255.0f, 230.0f / 255.0f);
-        //}
+       
     }
 
     /// <summary>

@@ -24,7 +24,7 @@ public class ConfirmBuyEquipment : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //LoadBuyEquipmentList();
+
     }
 
     // Update is called once per frame
@@ -52,8 +52,10 @@ public class ConfirmBuyEquipment : MonoBehaviour
                     sellEquipments[i].gameObject.tag = "buy";
                     PlayerPrefs.SetString("buytag", "buy");
                     sellEquipments[i].GetComponent<Image>().color = new Color(190.0f / 255.0f, 255.0f / 255.0f, 230.0f / 255.0f);
+                    #region 使用列表方式儲存購買裝備的資料
                     //equipmentList.Add(thebuyequipment);
-                    //Debug.Log("已購買裝備數量" + equipmentList.Count);
+                    //Debug.Log("已購買裝備數量" + equipmentList.Count); 
+                    #endregion
                     PlayerPrefs.SetString("已購買" + sellEquipments[i].transform.GetChild(0).gameObject.name, sellEquipments[i].transform.GetChild(0).gameObject.name);
                     SaveBuyEquipmentList();
                     #region 使用json儲存資料的方法
@@ -75,12 +77,16 @@ public class ConfirmBuyEquipment : MonoBehaviour
     }
     void SaveBuyEquipmentList()
     {
+        #region 使用列表方式儲存購買裝備的資料
         //for (int i = 0; i < equipmentList.Count; i++)
         //{
         //    PlayerPrefs.SetString("buyList" + i, equipmentList[i]);
-            
+
         //}
-        //PlayerPrefs.SetInt("equipmentListCount", equipmentList.Count);
+        //PlayerPrefs.SetInt("equipmentListCount", equipmentList.Count); 
+        #endregion
+
+        // 改變該按鈕已購買裝備的顏色
         PlayerPrefs.SetFloat("buyColorR", 190.0f / 255.0f);
         PlayerPrefs.SetFloat("buyColorG", 255.0f / 255.0f);
         PlayerPrefs.SetFloat("buyColorB", 230.0f / 255.0f);

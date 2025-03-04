@@ -61,6 +61,7 @@ public class FishingEquipmentSelect : MonoBehaviour
         //} 
         #endregion
 
+        #region 使用列表方式接受購買裝備的資料
         //int count = PlayerPrefs.GetInt("equipmentListCount", 0);
         //for (int i = 0; i < count; i++)
         //{
@@ -68,13 +69,15 @@ public class FishingEquipmentSelect : MonoBehaviour
         //    {
         //        textBuyEquipmentName.text = PlayerPrefs.GetString("buyList" + i);
         //    }
-        //}
+        //} 
+        #endregion
 
         if (PlayerPrefs.GetString("已購買" + buyEquipmentName) == buyEquipmentName)
         {
             textBuyEquipmentName.text = PlayerPrefs.GetString("已購買" + buyEquipmentName);
         }
 
+        // 該按鈕名稱有顯示已購買該裝備名稱，則該按鈕顯示白色
         if (equipmentName.text == buyEquipmentName || equipmentName.text == this.transform.GetChild(0).GetComponent<Text>().text)
         {
             this.GetComponent<Image>().color = Color.white;

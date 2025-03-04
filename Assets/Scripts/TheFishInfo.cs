@@ -30,20 +30,25 @@ public class TheFishInfo : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        #region 使用StartCoroutine，延遲顯示
         //theShowTime = Random.Range(earlyShow, laterShow);
         //isFishComing = true;
-        //StartCoroutine(ShowTheFishStatus());
+        //StartCoroutine(ShowTheFishStatus()); 
+        #endregion
+
         firstgoodHookAdjustTheShowTime = goodHookAdjustTheShowTime;
         firstproHookAdjustTheShowTime = proHookAdjustTheShowTime;
     }
 
+    #region 使用IEnumerator，延遲顯示
     //IEnumerator ShowTheFishStatus()
     //{ 
     //    yield return new WaitForSeconds(theShowTime);
     //    tensionButton.SetActive(true);
     //    this.GetComponent<Text>().text = "魚上鉤 !!!";
     //    Debug.Log("魚上鉤 !!!");
-    //}
+    //} 
+    #endregion
 
     // Update is called once per frame
     void Update()
@@ -62,6 +67,10 @@ public class TheFishInfo : MonoBehaviour
         }
         
     }
+
+    /// <summary>
+    /// 重新計時魚上鉤時間
+    /// </summary>
     public void reStartFishComingTime()
     {
         isFishComing = true;
@@ -73,6 +82,11 @@ public class TheFishInfo : MonoBehaviour
         }
         theShowTime = Random.Range(earlyShow, laterShow);
     }
+
+    /// <summary>
+    /// 因不同魚鉤影響魚上鉤時間
+    /// </summary>
+    /// <param name="equipmentname"></param>
     void AdjustTheShowTime(string equipmentname)
     {
         if (equipmentname != "好魚鉤")

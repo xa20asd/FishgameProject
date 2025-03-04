@@ -43,6 +43,7 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
     public int fishingP3;
     public int fishingP4;
     int fishNum1, fishNum2, fishNum3, fishPriceNum1, fishPriceNum2, fishPriceNum3;
+
     [Header("釣竿參數調整")]
     public int fishingProbability;
     public int goodPolefishingP1up;
@@ -70,11 +71,13 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
     int firstproPolefishingP4up;
     int firstproPoleadjustrangMaxUp;
     float firstproPoleWithdrawSpeedUp;
+
     [Header("釣線參數調整")]
     public float goodStringWithdrawSpeedUp;
     public float proStringWithdrawSpeedUp;
     float firstgoodStringWithdrawSpeedUp;
     float firstproStringWithdrawSpeedUp;
+
     [Header("魚鉤參數調整")]
     public int goodHookfishingP1up;
     public int goodHookfishingP2up;
@@ -249,6 +252,7 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
     {
         if (isWithdrawing) 
         {
+            //當選擇不同裝備時會影響到收回速度
             if (pole.text != "普通釣竿" || poleString.text != "普通釣線")
             {
                 AdjustWithdrawSpeed(pole.text);
@@ -260,6 +264,8 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
                 withdrawdistance -= Time.deltaTime * withdrawSpeed;
             }
             throwDistance.text = withdrawdistance.ToString("F1");
+
+            //當收回距離為0時，則為釣到魚!!
             if (withdrawdistance <= 0)
             {
                 withdrawdistance = 0;
@@ -271,6 +277,8 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
                 throwString.SetActive(false);
                 tensionButton.SetActive(false);
                 withdrawButton.SetActive(false);
+
+                //會因選擇裝備不同，釣到不同魚種的機率會受影響
                 if (pole.text != "普通釣竿" || poleString.text != "普通釣線" || bait.text != "魚餌1號")
                 {
                     AdjustFishingProbabilityRangeMax(pole.text);
@@ -280,6 +288,8 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
                     AdjustFishingProbability(pole.text);
                     AdjustFishingProbability(hook.text);
                     AdjustFishingProbability(bait.text);
+
+                    //因裝備不同影響到釣魚機率參數
                     fishingP1 =
                         (
                             fishingP1 +
@@ -313,293 +323,52 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
                 {
                     fishingProbability = Random.Range(rangeMin, rangeMax);
                 }
+
+                // 釣到魚種及價格不同會因地區與甩出距離影響
                 if (PlayerPrefs.GetString("fisharea") == "溪邊 1 區")
                 {
-                    fishNum1 = 0;
-                    fishNum2 = 0;
-                    fishPriceNum1 = 0;
-                    fishPriceNum2 = 0;
-                    if (fishingProbability >= fishingP1 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 4.0f && PlayerPrefs.GetFloat("finalThrowDistance") <= 10.0f)
-                    {
-                        fishNum3 = 0;
-                        fishPriceNum3 = 0;
-                    }
-                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 2.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 9.5f)
-                    {
-                        fishNum3 = 1;
-                        fishPriceNum3 = 1;
-                    }
-                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.8f && PlayerPrefs.GetFloat("finalThrowDistance") <= 8.0f)
-                    {
-                        fishNum3 = 2;
-                        fishPriceNum3 = 2;
-                    }
-                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 6.5f)
-                    {
-                        fishNum3 = 3;
-                        fishPriceNum3 = 3;
-                    }
-                    else
-                    { 
-                        fishNum3 = 4;
-                        fishPriceNum3 = 4;
-                    }
+                    ArrayAreaSelect(0, 0);
+                    ArrayFishSelect(0, 1, 2, 3, 4);
                 }
                 else if (PlayerPrefs.GetString("fisharea") == "溪邊 2 區")
                 {
-                    fishNum1 = 0;
-                    fishNum2 = 1;
-                    fishPriceNum1 = 0;
-                    fishPriceNum2 = 1;
-                    if (fishingProbability >= fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 4.0f && PlayerPrefs.GetFloat("finalThrowDistance") <= 10.0f)
-                    {
-                        fishNum3 = 0;
-                        fishPriceNum3 = 0;
-                    }
-                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 2.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 9.5f)
-                    {
-                        fishNum3 = 1;
-                        fishPriceNum3 = 1;
-                    }
-                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.8f && PlayerPrefs.GetFloat("finalThrowDistance") <= 8.0f)
-                    {
-                        fishNum3 = 2;
-                        fishPriceNum3 = 2;
-                    }
-                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 6.5f)
-                    {
-                        fishNum3 = 3;
-                        fishPriceNum3 = 3;
-                    }
-                    else
-                    {
-                        fishNum3 = 4;
-                        fishPriceNum3 = 4;
-                    }
+                    ArrayAreaSelect(0, 1);
+                    ArrayFishSelect(0, 1, 2, 3, 4);
                 }
                 else if (PlayerPrefs.GetString("fisharea") == "溪邊 3 區")
                 {
-                    fishNum1 = 0;
-                    fishNum2 = 2;
-                    fishPriceNum1 = 0;
-                    fishPriceNum2 = 2;
-                    if (fishingProbability >= fishingP1 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 4.0f && PlayerPrefs.GetFloat("finalThrowDistance") <= 10.0f)
-                    {
-                        fishNum3 = 0;
-                        fishPriceNum3 = 0;
-                    }
-                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 2.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 9.5f)
-                    {
-                        fishNum3 = 1;
-                        fishPriceNum3 = 1;
-                    }
-                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.8f && PlayerPrefs.GetFloat("finalThrowDistance") <= 8.0f)
-                    {
-                        fishNum3 = 2;
-                        fishPriceNum3 = 2;
-                    }
-                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 6.5f)
-                    {
-                        fishNum3 = 3;
-                        fishPriceNum3 = 3;
-                    }
-                    else
-                    {
-                        fishNum3 = 4;
-                        fishPriceNum3 = 4;
-                    }
+                    ArrayAreaSelect(0, 2);
+                    ArrayFishSelect(0, 1, 2, 3, 4);
                 }
                 else if (PlayerPrefs.GetString("fisharea") == "湖邊 1 區")
                 {
-                    fishNum1 = 1;
-                    fishNum2 = 0;
-                    fishPriceNum1 = 1;
-                    fishPriceNum2 = 0;
-                    if (fishingProbability >= fishingP1 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 4.0f && PlayerPrefs.GetFloat("finalThrowDistance") <= 10.0f)
-                    {
-                        fishNum3 = 0;
-                        fishPriceNum3 = 0;
-                    }
-                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 2.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 9.5f)
-                    {
-                        fishNum3 = 1;
-                        fishPriceNum3 = 1;
-                    }
-                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.8f && PlayerPrefs.GetFloat("finalThrowDistance") <= 8.0f)
-                    {
-                        fishNum3 = 2;
-                        fishPriceNum3 = 2;
-                    }
-                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 6.5f)
-                    {
-                        fishNum3 = 3;
-                        fishPriceNum3 = 3;
-                    }
-                    else
-                    {
-                        fishNum3 = 4;
-                        fishPriceNum3 = 4;
-                    }
+                    ArrayAreaSelect(1, 0);
+                    ArrayFishSelect(0, 1, 2, 3, 4);
                 }
                 else if (PlayerPrefs.GetString("fisharea") == "湖邊 2 區")
                 {
-                    fishNum1 = 1;
-                    fishNum2 = 1;
-                    fishPriceNum1 = 1;
-                    fishPriceNum2 = 1;
-                    if (fishingProbability >= fishingP1 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 4.0f && PlayerPrefs.GetFloat("finalThrowDistance") <= 10.0f)
-                    {
-                        fishNum3 = 0;
-                        fishPriceNum3 = 0;
-                    }
-                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 2.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 9.5f)
-                    {
-                        fishNum3 = 1;
-                        fishPriceNum3 = 1;
-                    }
-                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.8f && PlayerPrefs.GetFloat("finalThrowDistance") <= 8.0f)
-                    {
-                        fishNum3 = 2;
-                        fishPriceNum3 = 2;
-                    }
-                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 6.5f)
-                    {
-                        fishNum3 = 3;
-                        fishPriceNum3 = 3;
-                    }
-                    else
-                    {
-                        fishNum3 = 4;
-                        fishPriceNum3 = 4;
-                    }
+                    ArrayAreaSelect(1, 1);
+                    ArrayFishSelect(0, 1, 2, 3, 4);
                 }
                 else if (PlayerPrefs.GetString("fisharea") == "湖邊 3 區")
                 {
-                    fishNum1 = 1;
-                    fishNum2 = 2;
-                    fishPriceNum1 = 1;
-                    fishPriceNum2 = 2;
-                    if (fishingProbability >= fishingP1 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 4.0f && PlayerPrefs.GetFloat("finalThrowDistance") <= 10.0f)
-                    {
-                        fishNum3 = 0;
-                        fishPriceNum3 = 0;
-                    }
-                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 2.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 9.5f)
-                    {
-                        fishNum3 = 1;
-                        fishPriceNum3 = 1;
-                    }
-                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.8f && PlayerPrefs.GetFloat("finalThrowDistance") <= 8.0f)
-                    {
-                        fishNum3 = 2;
-                        fishPriceNum3 = 2;
-                    }
-                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 6.5f)
-                    {
-                        fishNum3 = 3;
-                        fishPriceNum3 = 3;
-                    }
-                    else
-                    {
-                        fishNum3 = 4;
-                        fishPriceNum3 = 4;
-                    }
+                    ArrayAreaSelect(1, 2);
+                    ArrayFishSelect(0, 1, 2, 3, 4);
                 }
                 else if (PlayerPrefs.GetString("fisharea") == "海邊 1 區")
                 {
-                    fishNum1 = 2;
-                    fishNum2 = 0;
-                    fishPriceNum1 = 2;
-                    fishPriceNum2 = 0;
-                    if (fishingProbability >= fishingP1 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 4.0f && PlayerPrefs.GetFloat("finalThrowDistance") <= 10.0f)
-                    {
-                        fishNum3 = 0;
-                        fishPriceNum3 = 0;
-                    }
-                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 2.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 9.5f)
-                    {
-                        fishNum3 = 1;
-                        fishPriceNum3 = 1;
-                    }
-                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.8f && PlayerPrefs.GetFloat("finalThrowDistance") <= 8.0f)
-                    {
-                        fishNum3 = 2;
-                        fishPriceNum3 = 2;
-                    }
-                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 6.5f)
-                    {
-                        fishNum3 = 3;
-                        fishPriceNum3 = 3;
-                    }
-                    else
-                    {
-                        fishNum3 = 4;
-                        fishPriceNum3 = 4;
-                    }
+                    ArrayAreaSelect(2, 0);
+                    ArrayFishSelect(0, 1, 2, 3, 4);
                 }
                 else if (PlayerPrefs.GetString("fisharea") == "海邊 2 區")
                 {
-                    fishNum1 = 2;
-                    fishNum2 = 1;
-                    fishPriceNum1 = 2;
-                    fishPriceNum2 = 1;
-                    if (fishingProbability >= fishingP1 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 4.0f && PlayerPrefs.GetFloat("finalThrowDistance") <= 10.0f)
-                    {
-                        fishNum3 = 0;
-                        fishPriceNum3 = 0;
-                    }
-                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 2.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 9.5f)
-                    {
-                        fishNum3 = 1;
-                        fishPriceNum3 = 1;
-                    }
-                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.8f && PlayerPrefs.GetFloat("finalThrowDistance") <= 8.0f)
-                    {
-                        fishNum3 = 2;
-                        fishPriceNum3 = 2;
-                    }
-                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 6.5f)
-                    {
-                        fishNum3 = 3;
-                        fishPriceNum3 = 3;
-                    }
-                    else
-                    {
-                        fishNum3 = 4;
-                        fishPriceNum3 = 4;
-                    }
+                    ArrayAreaSelect(2, 1);
+                    ArrayFishSelect(0, 1, 2, 3, 4);
                 }
                 else if (PlayerPrefs.GetString("fisharea") == "海邊 3 區")
                 {
-                    fishNum1 = 2;
-                    fishNum2 = 2;
-                    fishPriceNum1 = 2;
-                    fishPriceNum2 = 2;
-                    if (fishingProbability >= fishingP1 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 4.0f && PlayerPrefs.GetFloat("finalThrowDistance") <= 10.0f)
-                    {
-                        fishNum3 = 0;
-                        fishPriceNum3 = 0;
-                    }
-                    else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 2.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 9.5f)
-                    {
-                        fishNum3 = 1;
-                        fishPriceNum3 = 1;
-                    }
-                    else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.8f && PlayerPrefs.GetFloat("finalThrowDistance") <= 8.0f)
-                    {
-                        fishNum3 = 2;
-                        fishPriceNum3 = 2;
-                    }
-                    else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 6.5f)
-                    {
-                        fishNum3 = 3;
-                        fishPriceNum3 = 3;
-                    }
-                    else
-                    {
-                        fishNum3 = 4;
-                        fishPriceNum3 = 4;
-                    }
+                    ArrayAreaSelect(2, 2);
+                    ArrayFishSelect(0, 1, 2, 3, 4);
                 }
 
                 theFish.text = fish[fishNum1, fishNum2, fishNum3];
@@ -610,6 +379,8 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
                 realFishPrice.GetComponent<Text>().text = fishPrice[fishPriceNum1, fishPriceNum2, fishPriceNum3].ToString();
                 //PlayerPrefs.SetInt(fish[fishNum1, fishNum2, fishNum3], fishPrice[fishPriceNum1, fishPriceNum2, fishPriceNum3]);
             }
+
+            //當釣線變緊時，若持續收回會讓魚逃跑
             if (theFishStatus.text == "== 緊 ==")
             {
                 stringTensionTime += Time.deltaTime;
@@ -625,6 +396,10 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
         }
     }
 
+    /// <summary>
+    /// 按下按鈕則開始收線，將減少收回距離
+    /// </summary>
+    /// <param name="EventData"></param>
     public void OnPointerDown(PointerEventData EventData)
     {
         isWithdrawing = true;
@@ -635,6 +410,10 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
             canWithdrawReel = false;
         }
     }
+    /// <summary>
+    /// 放開按鈕則停止收回
+    /// </summary>
+    /// <param name="EventData"></param>
     public void OnPointerUp(PointerEventData EventData)
     {
         isWithdrawing = false;
@@ -642,6 +421,10 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
         theFishingReelSound.Stop();
     }
 
+    /// <summary>
+    /// 調整釣魚收回速度
+    /// </summary>
+    /// <param name="equipmentname"></param>
     void AdjustWithdrawSpeed(string equipmentname)
     {
         if (equipmentname != "好釣竿")
@@ -677,6 +460,11 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
             proStringWithdrawSpeedUp = firstproStringWithdrawSpeedUp;
         }
     }
+
+    /// <summary>
+    /// 調整魚種釣到機率
+    /// </summary>
+    /// <param name="equipmentname"></param>
     void AdjustFishingProbability(string equipmentname)
     {
         if (equipmentname != "好釣竿")
@@ -793,6 +581,11 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
         }
 
     }
+
+    /// <summary>
+    /// 調整魚種釣到機率範圍
+    /// </summary>
+    /// <param name="equipmentname"></param>
     void AdjustFishingProbabilityRangeMax(string equipmentname)
     {
         if (equipmentname != "好釣竿")
@@ -858,6 +651,56 @@ public class WithdrawTheString : MonoBehaviour, IPointerDownHandler, IPointerUpH
         else
         {
             bait5adjustrangMaxUp = firstbait5adjustrangMaxUp;
+        }
+    }
+
+    /// <summary>
+    /// 釣到魚種因不同地區選擇
+    /// </summary>
+    /// <param name="area1"></param>
+    /// <param name="area2"></param>
+    void ArrayAreaSelect(int area1, int area2)
+    {
+        fishNum1 = area1;
+        fishNum2 = area2;
+        fishPriceNum1 = area1;
+        fishPriceNum2 = area2;
+    }
+
+    /// <summary>
+    /// 因甩出距離不同釣到的魚種不同
+    /// </summary>
+    /// <param name="fishNumber"></param>
+    /// <param name="fishNumber1"></param>
+    /// <param name="fishNumber2"></param>
+    /// <param name="fishNumber3"></param>
+    /// <param name="fishNumber4"></param>
+    void ArrayFishSelect(int fishNumber, int fishNumber1, int fishNumber2, int fishNumber3, int fishNumber4)
+    {
+        if (fishingProbability >= fishingP1 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 4.0f && PlayerPrefs.GetFloat("finalThrowDistance") <= 10.0f)
+        {
+            fishNum3 = fishNumber;
+            fishPriceNum3 = fishNumber;
+        }
+        else if (fishingProbability >= fishingP2 && fishingProbability < fishingP1 && PlayerPrefs.GetFloat("finalThrowDistance") >= 2.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 9.5f)
+        {
+            fishNum3 = fishNumber1;
+            fishPriceNum3 = fishNumber1;
+        }
+        else if (fishingProbability >= fishingP3 && fishingProbability < fishingP2 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.8f && PlayerPrefs.GetFloat("finalThrowDistance") <= 8.0f)
+        {
+            fishNum3 = fishNumber2;
+            fishPriceNum3 = fishNumber2;
+        }
+        else if (fishingProbability >= fishingP4 && fishingProbability < fishingP3 && PlayerPrefs.GetFloat("finalThrowDistance") >= 1.5f && PlayerPrefs.GetFloat("finalThrowDistance") <= 6.5f)
+        {
+            fishNum3 = fishNumber3;
+            fishPriceNum3 = fishNumber3;
+        }
+        else
+        {
+            fishNum3 = fishNumber4;
+            fishPriceNum3 = fishNumber4;
         }
     }
 
